@@ -1,8 +1,9 @@
 const theme = {
   colors: {
-    background: '#121214',
-    text: '#e1e1e6',
-    primary: '#8257e6'
+    primary: '#fff',
+    background: '#f5f5f5',
+    textTitle: '#333',
+    text: '#777'
   },
   screens: {
     tablet: '769px',
