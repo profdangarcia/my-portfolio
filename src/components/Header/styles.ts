@@ -15,7 +15,6 @@ export const Container = styled.header<HeaderProps>`
   padding: 30px 15px;
   box-shadow: -5px 10px 12px -10px rgba(201, 201, 201, 0.67);
   transition: 0.5s ease-in-out;
-  /* transition: max-height 0.5s ease-in-out; */
 `
 export const Nav = styled.nav``
 
