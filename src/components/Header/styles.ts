@@ -28,10 +28,8 @@ export const VisibleContent = styled.div`
     font-size: 23px;
   }
 
-  @media (min-width: ${props => props.theme.screens.medium}) {
-    & a:first-child {
-      height: 25px;
-    }
+  & a:first-child {
+    height: 25px;
   }
 `
 
