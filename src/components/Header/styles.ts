@@ -30,6 +30,7 @@ export const VisibleContent = styled.div`
 
   & a:first-child {
     height: 25px;
+    width: 104px;
   }
 `
 

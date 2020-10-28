@@ -79,10 +79,7 @@ const Header: React.FC = () => {
           <VisibleContent>
             <Link href="/">
               <a>
-                <Logo
-                  alt="Logo"
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/ba/LOGO_CATHO.jpg"
-                />
+                <Logo alt="Dan Dev" src="" />
               </a>
             </Link>
             {!isMobile && navigation}
