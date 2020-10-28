@@ -56,5 +56,11 @@ export const NavItem = styled.li`
   a {
     text-decoration: none;
     color: #000;
+    transition: 0.2s ease-in;
+  }
+
+  a:hover {
+    color: ${props => props.theme.colors.textTitle};
+    font-size: 16px;
   }
 `

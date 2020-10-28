@@ -17,11 +17,14 @@ const Header: React.FC = () => {
   const [showNav, setShowNav] = useState(false)
 
   const handleScroll = () => {
-    if (window.pageYOffset >= 250 && !isVisible) {
+    const windowHeight = window.innerHeight
+    const windowWidth = window.innerWidth
+
+    if (window.pageYOffset >= windowHeight && !isVisible) {
       setiIsVisible(true)
     }
 
-    if (window.pageYOffset < 250 && isVisible) {
+    if (window.pageYOffset < windowHeight && isVisible) {
       setiIsVisible(false)
       setShowNav(false)
     }
