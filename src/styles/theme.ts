@@ -7,7 +7,7 @@ const theme = {
   },
   screens: {
     tablet: '769px',
-    medium: '1025px'
+    medium: '1024px'
   },
   wrapper: '1180px'
 }
