@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   const [isVisible, setiIsVisible] = useState(false)
   const [showNav, setShowNav] = useState(false)
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = () => {
     if (window.pageYOffset >= 250 && !isVisible) {
       setiIsVisible(true)
     }
@@ -25,11 +25,12 @@ const Header: React.FC = () => {
       setiIsVisible(false)
       setShowNav(false)
     }
-  }, [isVisible, showNav])
+  }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-  }, [])
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
 
   return (
     <Container isVisible={isVisible} showNav={showNav}>
