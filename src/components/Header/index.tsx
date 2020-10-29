@@ -45,7 +45,7 @@ const Header: React.FC = () => {
   const navigation = (
     <NavList>
       <NavItem>
-        <Link href="#">
+        <Link href="#banner">
           <a>Home</a>
         </Link>
       </NavItem>

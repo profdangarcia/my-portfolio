@@ -1,8 +1,14 @@
 import React, { useMemo } from 'react'
-import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaAngleDown,
+  FaGithub
+} from 'react-icons/fa'
 import Typical from 'react-typical'
 
-import { Container, SocialDiv, SocialLink } from './styles'
+import { Container, SocialDiv, SocialLink, KeepGoingButton } from './styles'
 
 const Banner: React.FC = () => {
   const bannerType = useMemo(
@@ -26,7 +32,7 @@ const Banner: React.FC = () => {
   )
 
   return (
-    <Container>
+    <Container id="banner">
       {bannerType}
       <SocialDiv>
         <SocialLink href="#" target="_blank">
@@ -39,9 +45,12 @@ const Banner: React.FC = () => {
           <FaInstagram />
         </SocialLink>
         <SocialLink href="#" target="_blank">
-          <FaTwitter />
+          <FaGithub />
         </SocialLink>
       </SocialDiv>
+      <KeepGoingButton href="#about">
+        <FaAngleDown />
+      </KeepGoingButton>
     </Container>
   )
 }
