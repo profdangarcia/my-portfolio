@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, 0.6);
+  background: #000;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url('/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   h1 {
     font-size: 32px;
@@ -15,6 +19,7 @@ export const Container = styled.div`
     color: #fff;
     font-family: Montserrat, serif;
     font-weight: 700;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
   }
 
   @media (min-width: ${props => props.theme.screens.medium}) {

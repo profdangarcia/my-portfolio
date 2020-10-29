@@ -50,6 +50,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap"
+            rel="stylesheet"
+          ></link>
           <link rel="favicon" href="" />
         </Head>
         <body>

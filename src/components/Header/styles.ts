@@ -10,11 +10,11 @@ export const Container = styled.header<HeaderProps>`
   position: fixed;
   max-height: ${props => (props.showNav ? '500px' : '92px')};
   overflow: hidden;
-  margin: ${props => (props.isVisible ? '0 0 0 0' : '-92px 0 0 0')};
+  margin: ${props => (props.isVisible ? '0 0 0 0' : '-102px 0 0 0')};
   background: #fff;
-  padding: 30px 0;
   box-shadow: -5px 10px 12px -10px rgba(201, 201, 201, 0.67);
   transition: 0.5s ease-in-out;
+  min-height: 92px;
 `
 export const Nav = styled.nav``
 
@@ -22,22 +22,17 @@ export const VisibleContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 92px;
   svg {
     color: #666;
     font-size: 23px;
   }
-
-  & a:first-child {
-    height: 25px;
-    width: 104px;
-  }
 `
 
 export const Logo = styled.img`
-  width: 104px;
-  height: 25px;
-  object-fit: cover;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
 `
 
 export const MenuButton = styled.button`
