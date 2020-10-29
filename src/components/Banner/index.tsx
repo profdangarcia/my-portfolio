@@ -25,7 +25,7 @@ const Banner: React.FC = () => {
           1000
         ]}
         loop={Infinity}
-        wrapper="h1"
+        wrapper="p"
       />
     ),
     []

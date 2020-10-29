@@ -13,7 +13,7 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  h1 {
+  p {
     font-size: 32px;
     margin-bottom: 20px;
     color: #fff;
@@ -23,7 +23,7 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${props => props.theme.screens.medium}) {
-    h1 {
+    p {
       font-size: 75px;
     }
   }

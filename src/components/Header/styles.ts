@@ -29,10 +29,25 @@ export const VisibleContent = styled.div`
   }
 `
 
-export const Logo = styled.img`
-  width: 100px;
-  height: auto;
-  object-fit: contain;
+export const Logo = styled.h1`
+  font-size: 36px;
+  color: #000;
+  font-family: 'Six Caps', sans-serif;
+  font-weight: 400;
+  min-width: 100px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    font-size: 38px;
+  }
+
+  @media (min-width: ${props => props.theme.screens.medium}) {
+    font-size: 48px;
+
+    &:hover {
+      font-size: 50px;
+    }
+  }
 `
 
 export const MenuButton = styled.button`
