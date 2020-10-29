@@ -42,6 +42,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <title>Dan Garcia - Fullstack Developer</title>
           <link
             href="https://fonts.googleapis.com/css?family=Poppins"
             rel="stylesheet"
@@ -54,7 +55,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap"
             rel="stylesheet"
           ></link>
-          <link rel="favicon" href="" />
+          <link rel="favicon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
