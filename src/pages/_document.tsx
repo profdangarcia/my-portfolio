@@ -42,7 +42,6 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-          <title>Dan Garcia - Fullstack Developer</title>
           <link
             href="https://fonts.googleapis.com/css?family=Poppins"
             rel="stylesheet"
