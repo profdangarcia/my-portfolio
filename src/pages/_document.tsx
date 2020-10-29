@@ -55,7 +55,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap"
             rel="stylesheet"
           ></link>
-          <link rel="favicon" href="/favicon.ico" />
+          <link rel="favicon" href="/favicon3.ico?v=2" />
         </Head>
         <body>
           <Main />
