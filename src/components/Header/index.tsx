@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { GoThreeBars } from 'react-icons/go'
 
+import { checkIsMobile } from '../../utils'
 import Wrapper from '../utils/Wrapper'
 import {
   Container,
@@ -38,8 +39,8 @@ const Header: React.FC = () => {
   })
 
   useEffect(() => {
-    const windowWidth = window.innerWidth
-    windowWidth >= 1024 && setIsMobile(false)
+    const isMobileDevice = checkIsMobile()
+    !isMobileDevice && setIsMobile(false)
   }, [])
 
   const navigation = (
