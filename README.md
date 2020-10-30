@@ -16,7 +16,7 @@
   <h3 align="center">Dan Garcia - Porfolio Project Repo</h3>
 </p>
 
-This is my porfolio website repository. Its open source ... so fell free to grab some ideas.
+This is my porfolio website repository. Its open source ... so feel free to grab some ideas.
 
 ## 🏃‍♂️ Try it Local
 
