@@ -16,13 +16,13 @@ const Banner: React.FC = () => {
       <Typical
         steps={[
           'Seja bem vindo!',
-          1000,
+          1500,
           'Me chamo Daniel',
-          1000,
+          1500,
           'Construo sites 💻',
-          1000,
+          1500,
           'E amo ☕',
-          1000
+          1500
         ]}
         loop={Infinity}
         wrapper="p"

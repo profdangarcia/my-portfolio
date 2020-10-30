@@ -13,7 +13,7 @@ const About: React.FC = () => {
   const [animate, setAnimate] = useState(false)
 
   const handleScroll = useCallback(() => {
-    if (window.pageYOffset >= 90 && !animate) {
+    if (window.pageYOffset >= 200 && !animate) {
       setAnimate(true)
     }
   }, [])

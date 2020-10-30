@@ -5,13 +5,15 @@ import Banner from '../components/Banner'
 import About from '../components/About'
 
 import { Container } from '../styles/pages/home/styles'
+import Seo from '../components/Seo'
 
 const Home: React.FC = () => {
+  const seoTitle = 'Aceita um café?'
+  const seoDescription =
+    'Um desenvolvedor frontend que ama a tecnologia e novos desafios!'
   return (
     <Container>
-      <Head>
-        <title>Dan Garcia - Fullstack Developer</title>
-      </Head>
+      <Seo title={seoTitle} description={seoDescription} />
       <Header />
       <Banner />
       <About />
