@@ -35,7 +35,7 @@ export const DevPicture = styled.img<AnimateProps>`
   @media (min-width: ${props => props.theme.screens.medium}) {
     width: 700px;
     max-width: 100%;
-    margin-right: 100px;
+    margin-right: 20px;
   }
 `
 export const AboutContainer = styled.div<AnimateProps>`
