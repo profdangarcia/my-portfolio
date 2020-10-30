@@ -6,6 +6,8 @@ import About from '../components/About'
 
 import { Container } from '../styles/pages/home/styles'
 import Seo from '../components/Seo'
+import TechSection from '../components/TechSection'
+import PortfolioSection from '../components/PortfolioSection'
 
 const Home: React.FC = () => {
   const seoTitle = 'Aceita um café?'
@@ -17,6 +19,8 @@ const Home: React.FC = () => {
       <Header />
       <Banner />
       <About />
+      <TechSection />
+      <PortfolioSection />
     </Container>
   )
 }

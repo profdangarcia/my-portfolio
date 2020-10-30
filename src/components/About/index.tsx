@@ -37,7 +37,7 @@ const About: React.FC = () => {
           </AboutText>
           <AboutText>
             Gosto de resolver desafios e atualmente concentro meus estudos em
-            backend, React e NextJS❤️
+            Node, React e NextJS❤️
           </AboutText>
         </AboutContainer>
       </Content>
