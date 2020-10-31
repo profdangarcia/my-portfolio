@@ -46,12 +46,12 @@ const Header: React.FC = () => {
   const navigation = (
     <NavList>
       <NavItem>
-        <Link href="#banner">
+        <Link href="/">
           <a>Home</a>
         </Link>
       </NavItem>
       <NavItem>
-        <Link href="#">
+        <Link href="/#about">
           <a>Sobre</a>
         </Link>
       </NavItem>
