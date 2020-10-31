@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 25px;
 
   &:hover {
-    & div:first-child {
+    & > div:first-child {
       width: 150px;
       height: 150px;
       left: -75px;
@@ -22,11 +22,19 @@ export const Container = styled.div`
     flex-direction: column;
     height: auto;
 
+    & > div:first-child {
+      width: 100%;
+      height: 200px;
+      left: 0;
+      top: 0;
+    }
+
     &:hover {
       & div:first-child {
         width: 100%;
         height: 200px;
         left: 0;
+        top: 0;
       }
     }
   }
@@ -48,6 +56,7 @@ export const ImgBox = styled.div`
 
   @media (max-width: ${props => props.theme.screens.tablet}) {
     position: relative;
+    flex-shrink: 0;
   }
 `
 
