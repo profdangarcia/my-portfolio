@@ -13,7 +13,6 @@ const PortfolioSection: React.FC = () => {
           <PortfolioCard />
           <PortfolioCard />
           <PortfolioCard />
-          <PortfolioCard />
         </Content>
       </Wrapper>
     </Container>

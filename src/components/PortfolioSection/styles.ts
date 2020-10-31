@@ -7,10 +7,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px;
   width: 100%;
   position: relative;
-  /* padding: 0 50px; */
 `
