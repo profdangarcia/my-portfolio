@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { GoThreeBars } from 'react-icons/go'
 
+import headerData from './data'
 import { checkIsMobile } from '../../utils'
 import Wrapper from '../utils/Wrapper'
 import {
@@ -16,6 +17,7 @@ import {
 } from './styles'
 
 const Header: React.FC = () => {
+  const { links } = headerData
   const [isVisible, setiIsVisible] = useState(false)
   const [showNav, setShowNav] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
@@ -43,35 +45,19 @@ const Header: React.FC = () => {
     !isMobileDevice && setIsMobile(false)
   }, [])
 
-  const navigation = (
-    <NavList>
-      <NavItem>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="/#about">
-          <a>Sobre</a>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="#">
-          <a>Portfólio</a>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="#">
-          <a>Blog</a>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="#">
-          <a>Contato</a>
-        </Link>
-      </NavItem>
-    </NavList>
+  const navItems = useMemo(
+    () =>
+      links.map(link => (
+        <NavItem key={link.name}>
+          <Link href={link.url}>
+            <a>{link.name}</a>
+          </Link>
+        </NavItem>
+      )),
+    [links]
   )
+
+  const navigation = <NavList>{navItems}</NavList>
 
   return (
     <Container isVisible={isVisible} showNav={showNav}>

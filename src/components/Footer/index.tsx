@@ -5,7 +5,7 @@ import { Container, CopyrightText } from './styles'
 
 const Footer: React.FC = () => {
   return (
-    <Container>
+    <Container id="footer">
       <SocialLinks isBanner={false} />
       <CopyrightText>Criado com ❤️ por Dan Garcia</CopyrightText>
     </Container>

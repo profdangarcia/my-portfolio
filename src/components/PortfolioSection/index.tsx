@@ -18,7 +18,7 @@ const PortfolioSection: React.FC = () => {
   )
 
   return (
-    <Container>
+    <Container id="portfolio">
       <Wrapper>
         <SectionTitle
           title={sectionData.title}
