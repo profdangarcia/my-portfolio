@@ -11,4 +11,5 @@ export const Content = styled.div`
   flex-wrap: wrap;
   width: 100%;
   position: relative;
+  padding-bottom: 50px;
 `

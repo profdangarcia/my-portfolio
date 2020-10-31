@@ -7,36 +7,52 @@ export const Container = styled.div`
   display: flex;
   width: 420px;
   margin: 25px;
+  border-radius: 6px;
 
-  &:hover {
-    & > div:first-child {
-      width: 150px;
-      height: 150px;
-      left: -75px;
-      top: calc(50% - 75px);
-      transition: 0.5s ease-in-out;
-    }
+  &:hover > div:first-child {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
   }
 
   @media (max-width: ${props => props.theme.screens.tablet}) {
     flex-direction: column;
     height: auto;
 
-    & > div:first-child {
+    &:hover > div:first-child {
       width: 100%;
       height: 200px;
       left: 0;
       top: 0;
     }
+  }
+`
 
-    &:hover {
-      & div:first-child {
-        width: 100%;
-        height: 200px;
-        left: 0;
-        top: 0;
-      }
-    }
+export const OpenSrcFlag = styled.div`
+  position: absolute;
+  right: 0;
+  top: 15px;
+  background: #d5137f;
+  z-index: 2;
+  width: 120px;
+  height: 30px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 4% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #b00765;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
   }
 `
 
@@ -52,11 +68,17 @@ export const ImgBox = styled.div`
   align-items: center;
   overflow: hidden;
   transition: 0.5s ease-in-out;
-  background: #fff;
+  background: ${props => props.theme.colors.background};
+  border-radius: 6px;
+  border: 2px solid ${props => props.theme.colors.background};
 
   @media (max-width: ${props => props.theme.screens.tablet}) {
     position: relative;
     flex-shrink: 0;
+    height: 150px;
+    left: 0;
+    top: 0;
+    border-radius: 6px 6px 0 0;
   }
 `
 
@@ -103,4 +125,8 @@ export const SeeMoreBtn = styled.a`
   background: #333;
   color: #fff;
   text-decoration: none;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    background: #777;
+  }
 `
