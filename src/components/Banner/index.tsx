@@ -35,17 +35,26 @@ const Banner: React.FC = () => {
     <Container id="banner">
       {bannerType}
       <SocialDiv>
-        <SocialLink href="#" target="_blank">
+        <SocialLink
+          href="https://www.linkedin.com/in/profdangarcia/"
+          target="_blank"
+        >
           <FaLinkedin />
         </SocialLink>
-        <SocialLink href="#" target="_blank">
+        <SocialLink href="https://github.com/profdangarcia" target="_blank">
+          <FaGithub />
+        </SocialLink>
+        <SocialLink
+          href="https://www.facebook.com/devDanGarcia"
+          target="_blank"
+        >
           <FaFacebook />
         </SocialLink>
-        <SocialLink href="#" target="_blank">
+        <SocialLink
+          href="https://www.instagram.com/prof_dangarcia/"
+          target="_blank"
+        >
           <FaInstagram />
-        </SocialLink>
-        <SocialLink href="#" target="_blank">
-          <FaGithub />
         </SocialLink>
       </SocialDiv>
       <KeepGoingButton href="#about">
