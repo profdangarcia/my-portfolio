@@ -66,7 +66,7 @@ const Header: React.FC = () => {
           <VisibleContent>
             <Link href="/">
               <a>
-                <Logo>DAN DEV</Logo>
+                <Logo>DAN GARCIA</Logo>
               </a>
             </Link>
             {!isMobile && navigation}
