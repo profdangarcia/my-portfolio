@@ -35,7 +35,7 @@ export const Logo = styled.h1`
   color: #000;
   font-family: 'Six Caps', sans-serif;
   font-weight: 400;
-  min-width: 100px;
+  min-width: 110px;
   transition: 0.2s ease-in-out;
 
   &:hover {
