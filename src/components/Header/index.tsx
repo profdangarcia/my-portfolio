@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { GoThreeBars } from 'react-icons/go'
 
@@ -21,6 +21,12 @@ const Header: React.FC = () => {
   const [isVisible, setiIsVisible] = useState(false)
   const [showNav, setShowNav] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
+
+  const closeNavigation = useCallback(() => {
+    if (showNav) {
+      setShowNav(false)
+    }
+  }, [showNav])
 
   const handleScroll = () => {
     const windowHeight = window.innerHeight
@@ -60,26 +66,32 @@ const Header: React.FC = () => {
   const navigation = <NavList>{navItems}</NavList>
 
   return (
-    <Container isVisible={isVisible} showNav={showNav}>
-      <Wrapper>
-        <Nav>
-          <VisibleContent>
-            <Link href="/">
-              <a>
-                <Logo>DAN GARCIA</Logo>
-              </a>
-            </Link>
-            {!isMobile && navigation}
-            <MenuButton onClick={() => setShowNav(!showNav)}>
-              <GoThreeBars />
-            </MenuButton>
-          </VisibleContent>
-          <MobileNavigation showNav={showNav}>
-            {isMobile && navigation}
-          </MobileNavigation>
-        </Nav>
-      </Wrapper>
-    </Container>
+    <>
+      <Container
+        isVisible={isVisible}
+        showNav={showNav}
+        onBlur={closeNavigation}
+      >
+        <Wrapper>
+          <Nav>
+            <VisibleContent>
+              <Link href="/">
+                <a>
+                  <Logo>DAN GARCIA</Logo>
+                </a>
+              </Link>
+              {!isMobile && navigation}
+              <MenuButton onClick={() => setShowNav(!showNav)}>
+                <GoThreeBars />
+              </MenuButton>
+            </VisibleContent>
+            <MobileNavigation showNav={showNav}>
+              {isMobile && navigation}
+            </MobileNavigation>
+          </Nav>
+        </Wrapper>
+      </Container>
+    </>
   )
 }
 

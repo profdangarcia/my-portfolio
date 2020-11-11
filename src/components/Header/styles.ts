@@ -5,12 +5,13 @@ interface HeaderProps {
   readonly showNav: boolean
 }
 
-export const Container = styled.header<HeaderProps>`
+export const Container = styled.header`
   width: 100%;
   position: fixed;
   max-height: ${props => (props.showNav ? '500px' : '92px')};
   overflow: hidden;
-  margin: ${props => (props.isVisible ? '0 0 0 0' : '-102px 0 0 0')};
+  margin: ${(props: HeaderProps) =>
+    props.isVisible ? '0 0 0 0' : '-102px 0 0 0'};
   background: #fff;
   box-shadow: -5px 10px 12px -10px rgba(201, 201, 201, 0.67);
   transition: 0.5s ease-in-out;
