@@ -8,6 +8,7 @@ import TechSection from '../components/TechSection'
 import PortfolioSection from '../components/PortfolioSection'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
+import CoffeeLoading from '../components/CoffeeLoading'
 
 const Home: React.FC = () => {
   const seoTitle = 'Aceita um café?'
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Seo title={seoTitle} description={seoDescription} />
+      <CoffeeLoading />
       <Header />
       <Banner />
       <About />
