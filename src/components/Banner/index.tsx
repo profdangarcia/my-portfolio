@@ -11,7 +11,7 @@ const Banner: React.FC = () => {
       <Typical
         steps={[
           'Seja bem vindo!',
-          1500,
+          3000,
           'Me chamo Daniel',
           1500,
           'Construo sites 💻',
