@@ -10,8 +10,8 @@ export const Container = styled.div`
 `
 
 export const Cup = styled.div`
-  height: 140px;
-  width: 180px;
+  height: 100px;
+  width: 140px;
   border: 6px solid #111;
   position: absolute;
   margin-left: auto;
@@ -19,12 +19,18 @@ export const Cup = styled.div`
   left: 0;
   right: 0;
   top: 50%;
-  border-radius: 0 0 70px 70px;
+  border-radius: 2px 2px 50px 50px;
   background: url(${coffee});
   box-shadow: 0 0 0 6px white;
   background-repeat: repeat-x;
   background-position: 0 140px;
   animation: fill 3s infinite;
+
+  @media (min-width: ${props => props.theme.screens.medium}) {
+    height: 140px;
+    width: 180px;
+    border-radius: 2px 2px 70px 70px;
+  }
 
   @keyframes fill {
     0% {
@@ -49,13 +55,21 @@ export const Cup = styled.div`
 `
 
 export const Handle = styled.div`
-  height: 70px;
-  width: 40px;
+  height: 50px;
+  width: 35px;
   z-index: 100;
   background-color: transparent;
   border: 6px solid white;
   position: relative;
-  left: 186px;
-  top: 2px;
-  border-radius: 0 25px 80px 0;
+  left: 146px;
+  top: -2px;
+  border-radius: 0 8px 25px 0;
+
+  @media (min-width: ${props => props.theme.screens.medium}) {
+    height: 70px;
+    width: 40px;
+    border-radius: 0 25px 80px 0;
+    left: 186px;
+    top: 2px;
+  }
 `

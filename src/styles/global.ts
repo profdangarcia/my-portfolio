@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
   body {
