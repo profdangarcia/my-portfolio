@@ -30,7 +30,7 @@ export const Cup = styled.div`
   box-shadow: 0 0 0 6px white;
   background-repeat: repeat-x;
   background-position: 0 140px;
-  animation: fill 3s infinite;
+  animation: fill 4.5s infinite;
   transform: ${(props: LoadProps) =>
     props.showLoad ? 'translateX(0)' : 'translateX(-100vw)'};
   transition: 1s ease-in-out;
