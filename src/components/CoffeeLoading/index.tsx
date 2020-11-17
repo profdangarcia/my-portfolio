@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Container, Cup, Handle } from './styles'
 
 const CoffeeLoading: React.FC = () => {
+  const [showLoad, setShowLoad] = useState(false)
+
+  useEffect(() => setShowLoad(true), [])
+
+  setTimeout(() => setShowLoad(false), 3000)
+
   return (
-    <Container>
-      <Cup>
+    <Container showLoad={showLoad}>
+      <Cup showLoad={showLoad}>
         <Handle />
       </Cup>
     </Container>

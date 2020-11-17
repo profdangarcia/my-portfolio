@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 import coffee from './coffee.png'
 
+interface LoadProps {
+  showLoad: boolean
+}
+
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #111;
   position: absolute;
-  z-index: 100;
+  z-index: ${(props: LoadProps) => (props.showLoad ? '100' : '-20')};
+  opacity: ${(props: LoadProps) => (props.showLoad ? '1' : '0')};
+  transition: 0.5s ease-in-out;
 `
 
 export const Cup = styled.div`
@@ -25,6 +31,9 @@ export const Cup = styled.div`
   background-repeat: repeat-x;
   background-position: 0 140px;
   animation: fill 3s infinite;
+  transform: ${(props: LoadProps) =>
+    props.showLoad ? 'translateX(0)' : 'translateX(-100vw)'};
+  transition: 1s ease-in-out;
 
   @media (min-width: ${props => props.theme.screens.medium}) {
     height: 140px;
