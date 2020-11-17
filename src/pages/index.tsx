@@ -7,6 +7,7 @@ import Seo from '../components/Seo'
 import TechSection from '../components/TechSection'
 import PortfolioSection from '../components/PortfolioSection'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 const Home: React.FC = () => {
   const seoTitle = 'Aceita um café?'
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <About />
       <TechSection />
       <PortfolioSection />
+      <Contact />
       <Footer />
     </>
   )
