@@ -7,8 +7,10 @@ export default async (
 ): Promise<void> => {
   const payload = req.body
   const { HOST } = process.env
-  if (!payload || req.method !== 'POST' || req.headers.host !== HOST) {
-    return res.status(400).json({ message: 'Bad request!' })
+  if (!payload || req.method !== 'POST' || req.headers.origin !== HOST) {
+    return res.status(400).json({
+      message: 'Bad request!'
+    })
   }
 
   const message = `Contato: "${payload.name}" <${payload.email}>\n\n${payload.message}`
