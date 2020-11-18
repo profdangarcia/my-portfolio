@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import nodemailer from 'nodemailer'
 
-const { MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASSWORD } = process.env
+const { MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASSWORD, EMAIL_TO } = process.env
 
-const main = async ({ from, to, subject, text }) => {
+const main = async ({ from, subject, text }) => {
   const mailService = nodemailer.createTransport({
     host: MAIL_HOST,
     port: MAIL_PORT,
@@ -16,10 +16,10 @@ const main = async ({ from, to, subject, text }) => {
 
   // send mail with defined transport object
   const info = await mailService.sendMail({
-    from: from,
-    to: to,
-    subject: subject,
-    text: text
+    from,
+    to: EMAIL_TO,
+    subject,
+    text
   })
 
   return info
