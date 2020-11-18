@@ -78,8 +78,6 @@ const retrieveButtonBg = (type: string) => {
     error: '#db4437',
     loading: '#000'
   }
-  console.log('TYPE', type)
-
   return options[type]
 }
 
@@ -100,7 +98,10 @@ export const SubmitButton = styled.button`
   background: ${(props: ButtonProps) => retrieveButtonBg(props.formStatus)};
 
   &:hover {
-    background: #000;
+    background: ${(props: ButtonProps) =>
+      props.formStatus === 'form'
+        ? '#000'
+        : retrieveButtonBg(props.formStatus)};
     color: #fff;
   }
 `
