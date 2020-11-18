@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Axios from 'axios'
 import * as Yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { useYupValidationResolver } from '../../../hooks'
@@ -27,17 +28,27 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const resolver = useYupValidationResolver(yupSchema)
-  const { handleSubmit, register, errors } = useForm<FormData>({
+  const { handleSubmit, register, errors, reset } = useForm<FormData>({
     resolver,
     mode: 'onBlur'
   })
 
-  const submitForm = (data: FormData): void => {
-    console.log(data)
+  const [isLoading, setIsLoading] = useState(false)
+  const [hasError, setHasError] = useState(false)
+
+  const submitForm = async (data: FormData): Promise<void> => {
+    setIsLoading(true)
+    let requestError = true
+    const { status } = await Axios.post('/api/send-mail', data)
+    if (status === 200) {
+      requestError = false
+      reset()
+    }
+    setHasError(requestError)
   }
 
   return (
-    <Container onSubmit={handleSubmit(data => submitForm(data))}>
+    <Container onSubmit={handleSubmit(submitForm)}>
       <FormItemContainer>
         <Input
           id="name"
