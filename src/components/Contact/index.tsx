@@ -2,7 +2,8 @@ import React from 'react'
 
 import SectionTitle from '../utils/SectionTitle'
 import Wrapper from '../utils/Wrapper'
-import { Container, ContactForm, Input, TextArea, SubmitButton } from './styles'
+import ContactForm from './ContactForm'
+import { Container } from './styles'
 
 const Contact: React.FC = () => {
   return (
@@ -12,30 +13,7 @@ const Contact: React.FC = () => {
           title="ENTRE EM CONTATO"
           description="Me mande uma mensagem, me convide para um café! Eu pago!"
         />
-        <ContactForm>
-          <Input
-            id="name"
-            type="text"
-            name="name"
-            className="form-field"
-            placeholder="Seu nome..."
-          />
-          <Input
-            id="email"
-            type="text"
-            name="email"
-            className="form-field"
-            placeholder="Seu e-mail..."
-          />
-          <TextArea
-            id="message"
-            name="message"
-            rows={8}
-            className="form-field"
-            placeholder="Seu convite para o café..."
-          />
-          <SubmitButton type="submit">ENVIAR CAFÉ</SubmitButton>
-        </ContactForm>
+        <ContactForm />
       </Wrapper>
     </Container>
   )
