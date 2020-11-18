@@ -3,7 +3,8 @@ const theme = {
     primary: '#fff',
     background: '#f5f5f5',
     textTitle: '#333',
-    text: '#777'
+    text: '#777',
+    error: '#ff3d3d'
   },
   screens: {
     tablet: '768px',

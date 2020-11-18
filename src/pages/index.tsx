@@ -7,6 +7,7 @@ import Seo from '../components/Seo'
 import TechSection from '../components/TechSection'
 import PortfolioSection from '../components/PortfolioSection'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 import CoffeeLoading from '../components/CoffeeLoading'
 
 const Home: React.FC = () => {
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
       <About />
       <TechSection />
       <PortfolioSection />
+      <Contact />
       <Footer />
     </>
   )

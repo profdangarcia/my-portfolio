@@ -15,8 +15,12 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    font: 400 14px Poppins, sans-serif;
+    font: 400 13px Poppins, sans-serif;
     -webkit-font-smoothing: antialiased;
+
+    @media (min-width: ${props => props.theme.screens.medium}) {
+      font-size: 14px;
+    }
   }
 
   button {
