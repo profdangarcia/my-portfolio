@@ -34,19 +34,29 @@ const ContactForm: React.FC = () => {
     mode: 'onBlur'
   })
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [hasError, setHasError] = useState(false)
+  const [formStatus, setFormStatus] = useState('form')
 
   const submitForm = async (data: FormData): Promise<void> => {
-    setIsLoading(true)
-    let requestError = true
+    setFormStatus('loading')
+    let requestError = 'error'
     const { status } = await Axios.post('/api/send-mail', data)
     if (status === 200) {
-      requestError = false
+      requestError = 'success'
       reset()
     }
-    setHasError(requestError)
-    setIsLoading(false)
+    setFormStatus(requestError)
+    setTimeout(() => setFormStatus('form'), 2500)
+  }
+
+  const buttonContent = () => {
+    const availableOptions = {
+      form: 'ENVIAR CAFÉ ☕',
+      loading: <Loader />,
+      error: 'Algo deu errado 😔',
+      success: 'CAFÉ ENVIADO ☕'
+    }
+
+    return availableOptions[formStatus]
   }
 
   return (
@@ -60,7 +70,7 @@ const ContactForm: React.FC = () => {
           placeholder="Seu nome..."
           ref={register}
           hasError={!!errors?.name}
-          disabled={isLoading}
+          disabled={formStatus === 'loading'}
         />
         <ErrorMessage appear={!!errors?.name} message={errors?.name?.message} />
       </FormItemContainer>
@@ -73,7 +83,7 @@ const ContactForm: React.FC = () => {
           placeholder="Seu e-mail..."
           ref={register}
           hasError={!!errors?.email}
-          disabled={isLoading}
+          disabled={formStatus === 'loading'}
         />
         <ErrorMessage
           appear={!!errors?.email}
@@ -89,15 +99,19 @@ const ContactForm: React.FC = () => {
           placeholder="Seu convite para o café..."
           ref={register}
           hasError={!!errors?.message}
-          disabled={isLoading}
+          disabled={formStatus === 'loading'}
         />
         <ErrorMessage
           appear={!!errors?.message}
           message={errors?.message?.message}
         />
       </FormItemContainer>
-      <SubmitButton type="submit" disabled={isLoading} isLoading={isLoading}>
-        {isLoading ? <Loader /> : 'ENVIAR CAFÉ'}
+      <SubmitButton
+        type="submit"
+        disabled={formStatus === 'loading'}
+        formStatus={formStatus}
+      >
+        {buttonContent()}
       </SubmitButton>
     </Container>
   )

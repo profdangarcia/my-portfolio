@@ -8,8 +8,8 @@ interface FormItemProps {
   hasError: boolean
 }
 
-interface LoadProps {
-  isLoading: boolean
+interface ButtonProps {
+  formStatus: string
 }
 
 export const Container = styled.form`
@@ -71,6 +71,18 @@ export const TextArea = styled.textarea`
     props.hasError ? '1px solid #ff3d3d' : 'solid 1px #dfdfdf'};
 `
 
+const retrieveButtonBg = (type: string) => {
+  const options = {
+    success: '#25D366',
+    form: 'none',
+    error: '#db4437',
+    loading: '#000'
+  }
+  console.log('TYPE', type)
+
+  return options[type]
+}
+
 export const SubmitButton = styled.button`
   position: relative;
   transition: all ease 0.3s;
@@ -85,7 +97,7 @@ export const SubmitButton = styled.button`
   color: ${props => props.theme.colors.textTitle};
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  background: ${(props: LoadProps) => (props.isLoading ? '#000' : 'none')};
+  background: ${(props: ButtonProps) => retrieveButtonBg(props.formStatus)};
 
   &:hover {
     background: #000;
