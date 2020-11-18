@@ -8,6 +8,10 @@ interface FormItemProps {
   hasError: boolean
 }
 
+interface LoadProps {
+  isLoading: boolean
+}
+
 export const Container = styled.form`
   display: flex;
   align-items: center;
@@ -68,6 +72,7 @@ export const TextArea = styled.textarea`
 `
 
 export const SubmitButton = styled.button`
+  position: relative;
   transition: all ease 0.3s;
   display: flex;
   align-items: center;
@@ -80,6 +85,7 @@ export const SubmitButton = styled.button`
   color: ${props => props.theme.colors.textTitle};
   font-family: Montserrat, sans-serif;
   font-weight: 600;
+  background: ${(props: LoadProps) => (props.isLoading ? '#000' : 'none')};
 
   &:hover {
     background: #000;

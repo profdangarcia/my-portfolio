@@ -11,6 +11,7 @@ import {
   TextArea,
   SubmitButton
 } from './styles'
+import Loader from '../../Loader'
 
 const yupSchema = Yup.object({
   name: Yup.string().required('Vou precisar do seu nome.'),
@@ -45,6 +46,7 @@ const ContactForm: React.FC = () => {
       reset()
     }
     setHasError(requestError)
+    setIsLoading(false)
   }
 
   return (
@@ -58,6 +60,7 @@ const ContactForm: React.FC = () => {
           placeholder="Seu nome..."
           ref={register}
           hasError={!!errors?.name}
+          disabled={isLoading}
         />
         <ErrorMessage appear={!!errors?.name} message={errors?.name?.message} />
       </FormItemContainer>
@@ -70,6 +73,7 @@ const ContactForm: React.FC = () => {
           placeholder="Seu e-mail..."
           ref={register}
           hasError={!!errors?.email}
+          disabled={isLoading}
         />
         <ErrorMessage
           appear={!!errors?.email}
@@ -85,13 +89,16 @@ const ContactForm: React.FC = () => {
           placeholder="Seu convite para o café..."
           ref={register}
           hasError={!!errors?.message}
+          disabled={isLoading}
         />
         <ErrorMessage
           appear={!!errors?.message}
           message={errors?.message?.message}
         />
       </FormItemContainer>
-      <SubmitButton type="submit">ENVIAR CAFÉ</SubmitButton>
+      <SubmitButton type="submit" disabled={isLoading} isLoading={isLoading}>
+        {isLoading ? <Loader /> : 'ENVIAR CAFÉ'}
+      </SubmitButton>
     </Container>
   )
 }
