@@ -14,7 +14,7 @@ const headerData = {
     },
     {
       name: 'Contato',
-      url: '#footer'
+      url: '#contact'
     }
   ]
 }
