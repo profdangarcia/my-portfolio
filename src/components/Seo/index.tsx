@@ -14,7 +14,6 @@ const Seo: React.FC<SeoProps> = ({ title, description, canonical = '' }) => {
       <meta property="og:title" content={title} />
       <meta name="google-site-verification" content="hyVDovsqxQpSLvMzLawu_CkTM5siBtxl1Y6RrNhxpY8" />
       <meta property="og:type" content="website" />
-      <meta name="google-site-verification" content="hyVDovsqxQpSLvMzLawu_CkTM5siBtxl1Y6RrNhxpY8" />
       <meta
         property="og:url"
         content={`https://dangarcia-devel.vercel.app${canonical}`}
