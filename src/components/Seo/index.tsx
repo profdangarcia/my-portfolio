@@ -39,7 +39,7 @@ const Seo: React.FC<SeoProps> = ({ title, description, canonical = '' }) => {
         rel="canonical"
         data-cy="canonical-link"
       />
-      <title>{`${title} | Dan Dev`}</title>
+      <title>{`${title} | Dan Garcia`}</title>
     </Head>
   )
 }
