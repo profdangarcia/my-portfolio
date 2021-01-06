@@ -30,7 +30,7 @@ const Home: React.FC<PageProps> = ({ language }) => {
       <Header data={data.header} />
       <Banner data={data.banner} />
       <About data={data.about} />
-      <TechSection />
+      <TechSection data={data.techs} />
       <PortfolioSection />
       <Contact />
       <Footer />
