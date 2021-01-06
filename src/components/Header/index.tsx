@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { GoThreeBars } from 'react-icons/go'
 
-import headerData from './data'
 import { checkIsMobile } from '../../utils'
 import Wrapper from '../utils/Wrapper'
 import {
@@ -16,8 +15,18 @@ import {
   NavItem
 } from './styles'
 
-const Header: React.FC = () => {
-  const { links } = headerData
+type link = {
+  name: string
+  url: string
+}
+interface Links {
+  links: Array<link>
+}
+interface Props {
+  data: Links
+}
+
+const Header: React.FC<Props> = ({ data: { links } }) => {
   const [isVisible, setiIsVisible] = useState(false)
   const [showNav, setShowNav] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
