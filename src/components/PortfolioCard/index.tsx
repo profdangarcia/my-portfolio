@@ -21,9 +21,10 @@ interface CardProps {
     repoUrl?: string
     websiteUrl: string
   }
+  buttonText: string
 }
 
-const PortfolioCard: React.FC<CardProps> = ({ cardData }) => {
+const PortfolioCard: React.FC<CardProps> = ({ cardData, buttonText }) => {
   return (
     <Container>
       <ImgBox data-text="OCC">
@@ -42,7 +43,7 @@ const PortfolioCard: React.FC<CardProps> = ({ cardData }) => {
           <Title>{cardData.title}</Title>
           <Description>{cardData.description}</Description>
           <SeeMoreBtn href={cardData.websiteUrl} target="_blank">
-            Veja Mais
+            {buttonText}
           </SeeMoreBtn>
         </Content>
       </ContentContainer>
