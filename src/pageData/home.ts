@@ -124,6 +124,9 @@ export default {
           error: 'Diga algo no e-mail.'
         }
       }
+    },
+    footer: {
+      message: 'Criado com ❤️ por Dan Garcia'
     }
   },
   en: {
@@ -246,6 +249,9 @@ export default {
           error: 'Say something in the email.'
         }
       }
+    },
+    footer: {
+      message: 'Created with ❤️ by Dan Garcia'
     }
   }
 }
