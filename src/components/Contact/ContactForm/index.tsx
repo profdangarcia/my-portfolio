@@ -43,12 +43,16 @@ const ContactForm: React.FC<Props> = ({ data }) => {
   const submitForm = async (data: FormData): Promise<void> => {
     setFormStatus('loading')
     let requestError = 'error'
-    const { status } = await Axios.post('/api/send-mail', data)
-    console.log(status)
-    if (status === 200) {
-      requestError = 'success'
-      reset()
+    try {
+      const { status } = await Axios.post('/api/send-mail', data)
+      if (status === 200) {
+        requestError = 'success'
+        reset()
+      }
+    } catch (error) {
+      console.error('Errors, check the backend:', error.message)
     }
+
     setFormStatus(requestError)
     setTimeout(() => setFormStatus('form'), 2500)
   }
