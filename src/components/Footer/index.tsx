@@ -3,11 +3,17 @@ import SocialLinks from '../utils/SocialLinks'
 
 import { Container, CopyrightText } from './styles'
 
-const Footer: React.FC = () => {
+type Props = {
+  data: {
+    message: string
+  }
+}
+
+const Footer: React.FC<Props> = ({ data }) => {
   return (
     <Container id="footer">
       <SocialLinks isBanner={false} />
-      <CopyrightText>Criado com ❤️ por Dan Garcia</CopyrightText>
+      <CopyrightText>{data.message}</CopyrightText>
     </Container>
   )
 }

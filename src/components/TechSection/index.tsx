@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { FiMonitor } from 'react-icons/fi'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiNextDotJs } from 'react-icons/si'
@@ -14,52 +14,42 @@ import {
   TechDescription
 } from './styles'
 
-const TechSection: React.FC = () => {
+interface ComponentData {
+  title: string
+  description: string
+  icon: string
+}
+
+type Props = {
+  data: Array<ComponentData>
+}
+
+const iconList = {
+  monitor: <FiMonitor />,
+  react: <FaReact />,
+  node: <FaNodeJs />,
+  next: <SiNextDotJs />
+}
+
+const TechSection: React.FC<Props> = ({ data }) => {
+  const techList = useMemo(
+    () =>
+      data.map(tech => (
+        <TechItem key={tech.title}>
+          {iconList[tech.icon]}
+          <InfoBox>
+            <TechTitle>{tech.title}</TechTitle>
+            <TechDescription>{tech.description}</TechDescription>
+          </InfoBox>
+        </TechItem>
+      )),
+    [data]
+  )
+
   return (
     <Container>
       <Wrapper>
-        <Content>
-          <TechItem>
-            <FiMonitor />
-            <InfoBox>
-              <TechTitle>DE TUDO UM POUCO</TechTitle>
-              <TechDescription>
-                Do PHP ao Python, já vi muita coisa! Mas atualmente meu foco tem
-                sido nas seguintes tecnologias:
-              </TechDescription>
-            </InfoBox>
-          </TechItem>
-          <TechItem>
-            <FaReact />
-            <InfoBox>
-              <TechTitle>REACTJS</TechTitle>
-              <TechDescription>
-                Uma biblioteca Javascript que lhe fornece super poderes na
-                criação de interfaces
-              </TechDescription>
-            </InfoBox>
-          </TechItem>
-          <TechItem>
-            <FaNodeJs />
-            <InfoBox>
-              <TechTitle>NODEJS</TechTitle>
-              <TechDescription>
-                Javascript nunca é demais... e seu potencial no backend é
-                indiscutível
-              </TechDescription>
-            </InfoBox>
-          </TechItem>
-          <TechItem>
-            <SiNextDotJs />
-            <InfoBox>
-              <TechTitle>NEXTJS</TechTitle>
-              <TechDescription>
-                Framework para trabalhar com React possibilitando otimizações
-                incríveis com SSR e SSG
-              </TechDescription>
-            </InfoBox>
-          </TechItem>
-        </Content>
+        <Content>{techList}</Content>
       </Wrapper>
     </Container>
   )

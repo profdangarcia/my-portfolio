@@ -3,16 +3,38 @@ import PortfolioCard from '../PortfolioCard'
 import SectionTitle from '../utils/SectionTitle'
 import Wrapper from '../utils/Wrapper'
 
-import sectionData from './data'
 import { Container, Content } from './styles'
 
-const PortfolioSection: React.FC = () => {
-  const { projects } = sectionData
+interface Projects {
+  title: string
+  description: string
+  picture: string
+  openSource: boolean
+  repoUrl?: string
+  websiteUrl: string
+}
+interface ComponentData {
+  title: string
+  description: string
+  buttonText: string
+  projects: Array<Projects>
+}
+
+type Props = {
+  data: ComponentData
+}
+
+const PortfolioSection: React.FC<Props> = ({ data }) => {
+  const { projects } = data
 
   const cards = useMemo(
     () =>
       projects.map(project => (
-        <PortfolioCard cardData={project} key={project.title} />
+        <PortfolioCard
+          cardData={project}
+          key={project.title}
+          buttonText={data.buttonText}
+        />
       )),
     [projects]
   )
@@ -20,10 +42,7 @@ const PortfolioSection: React.FC = () => {
   return (
     <Container id="portfolio">
       <Wrapper>
-        <SectionTitle
-          title={sectionData.title}
-          description={sectionData.description}
-        />
+        <SectionTitle title={data.title} description={data.description} />
         <Content>{cards}</Content>
       </Wrapper>
     </Container>
