@@ -102,6 +102,28 @@ export default {
           websiteUrl: 'https://front-challenge-03.vercel.app/'
         }
       ]
+    },
+    contact: {
+      title: 'ENTRE EM CONTATO',
+      description: 'Me mande uma mensagem, me convide para um café! Eu pago!',
+      form: {
+        error: 'Algo deu errado 😔',
+        success: 'CAFÉ ENVIADO ☕',
+        default: 'ENVIAR CAFÉ ☕',
+        name: {
+          placeholder: 'Seu nome...',
+          error: 'Vou precisar do seu nome.'
+        },
+        email: {
+          placeholder: 'Seu e-mail...',
+          error: 'Preciso do seu e-mail para responder.',
+          errorInvalid: 'E-mail inválido!'
+        },
+        message: {
+          placeholder: 'Seu convite para o café...',
+          error: 'Diga algo no e-mail.'
+        }
+      }
     }
   },
   en: {
@@ -202,6 +224,28 @@ export default {
           websiteUrl: 'https://front-challenge-03.vercel.app/'
         }
       ]
+    },
+    contact: {
+      title: 'GET IN TOUCH',
+      description: 'Text me, invite me for coffee! I pay!',
+      form: {
+        error: 'Error occurred 😔',
+        success: 'COFFEE SENT ☕',
+        default: 'SEND COFFEE ☕',
+        name: {
+          placeholder: 'Your name...',
+          error: 'I will need your name.'
+        },
+        email: {
+          placeholder: 'Your e-mail...',
+          error: 'I need your email to reply.',
+          errorInvalid: 'Invalid e-mail!'
+        },
+        message: {
+          placeholder: 'Your invitation to coffee ...',
+          error: 'Say something in the email.'
+        }
+      }
     }
   }
 }

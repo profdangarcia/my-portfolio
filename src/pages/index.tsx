@@ -32,7 +32,7 @@ const Home: React.FC<PageProps> = ({ language }) => {
       <About data={data.about} />
       <TechSection data={data.techs} />
       <PortfolioSection data={data.portfolio} />
-      <Contact />
+      <Contact data={data.contact} />
       <Footer />
     </>
   )

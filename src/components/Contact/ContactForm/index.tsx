@@ -12,22 +12,26 @@ import {
   SubmitButton
 } from './styles'
 import Loader from '../../Loader'
-
-const yupSchema = Yup.object({
-  name: Yup.string().required('Vou precisar do seu nome.'),
-  email: Yup.string()
-    .email('E-mail inválido!')
-    .required('Preciso do seu e-mail para responder.'),
-  message: Yup.string().required('Diga algo no e-mail.')
-})
-
+import { FormProps } from '../form'
 interface FormData {
   name: string
   email: string
   message: string
 }
 
-const ContactForm: React.FC = () => {
+type Props = {
+  data: FormProps
+}
+
+const ContactForm: React.FC<Props> = ({ data }) => {
+  const yupSchema = Yup.object({
+    name: Yup.string().required(data.name.error),
+    email: Yup.string()
+      .email(data.email.errorInvalid)
+      .required(data.email.error),
+    message: Yup.string().required(data.message.error)
+  })
+
   const resolver = useYupValidationResolver(yupSchema)
   const { handleSubmit, register, errors, reset } = useForm<FormData>({
     resolver,
@@ -50,10 +54,10 @@ const ContactForm: React.FC = () => {
 
   const buttonContent = () => {
     const availableOptions = {
-      form: 'ENVIAR CAFÉ ☕',
+      form: data.default,
       loading: <Loader />,
-      error: 'Algo deu errado 😔',
-      success: 'CAFÉ ENVIADO ☕'
+      error: data.error,
+      success: data.success
     }
 
     return availableOptions[formStatus]
@@ -67,7 +71,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="name"
           className="form-field"
-          placeholder="Seu nome..."
+          placeholder={data.name.placeholder}
           ref={register}
           hasError={!!errors?.name}
           disabled={formStatus === 'loading'}
@@ -80,7 +84,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="email"
           className="form-field"
-          placeholder="Seu e-mail..."
+          placeholder={data.email.placeholder}
           ref={register}
           hasError={!!errors?.email}
           disabled={formStatus === 'loading'}
@@ -96,7 +100,7 @@ const ContactForm: React.FC = () => {
           name="message"
           rows={8}
           className="form-field"
-          placeholder="Seu convite para o café..."
+          placeholder={data.message.placeholder}
           ref={register}
           hasError={!!errors?.message}
           disabled={formStatus === 'loading'}
