@@ -44,6 +44,7 @@ const ContactForm: React.FC<Props> = ({ data }) => {
     setFormStatus('loading')
     let requestError = 'error'
     const { status } = await Axios.post('/api/send-mail', data)
+    console.log(status)
     if (status === 200) {
       requestError = 'success'
       reset()
