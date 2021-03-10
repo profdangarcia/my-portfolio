@@ -72,7 +72,8 @@ export default {
           picture: '/projects/occ.png',
           openSource: false,
           repoUrl: '',
-          websiteUrl: 'https://www.occ.com.mx/educacion'
+          websiteUrl: 'https://www.occ.com.mx/educacion',
+          available: true
         },
         {
           title: 'Cursos Rápidos',
@@ -81,7 +82,8 @@ export default {
           picture: '/projects/catho-edu.png',
           openSource: false,
           repoUrl: '',
-          websiteUrl: 'https://www.catho.com.br/educacao/cursos-online'
+          websiteUrl: 'https://www.catho.com.br/educacao/cursos-online',
+          available: false
         },
         {
           title: 'EasyBank',
@@ -90,7 +92,8 @@ export default {
           picture: '/projects/challenge02.png',
           openSource: true,
           repoUrl: 'https://github.com/profdangarcia/front-challenge-02',
-          websiteUrl: 'https://front-challenge-02.now.sh/'
+          websiteUrl: 'https://front-challenge-02.now.sh/',
+          available: true
         },
         {
           title: 'Places in the World',
@@ -99,9 +102,16 @@ export default {
           picture: '/projects/challenge03.png',
           openSource: true,
           repoUrl: 'https://github.com/profdangarcia/front-challenge-03',
-          websiteUrl: 'https://front-challenge-03.vercel.app/'
+          websiteUrl: 'https://front-challenge-03.vercel.app/',
+          available: true
         }
-      ]
+      ],
+      tip: {
+        title: 'Aqui, pegue ☕',
+        message:
+          'Este portfólio também é open source e está no Github. Corre pra ver!',
+        url: 'https://github.com/profdangarcia/my-portfolio'
+      }
     },
     contact: {
       title: 'ENTRE EM CONTATO',
@@ -197,7 +207,8 @@ export default {
           picture: '/projects/occ.png',
           openSource: false,
           repoUrl: '',
-          websiteUrl: 'https://www.occ.com.mx/educacion'
+          websiteUrl: 'https://www.occ.com.mx/educacion',
+          available: true
         },
         {
           title: 'Quick Courses',
@@ -206,7 +217,8 @@ export default {
           picture: '/projects/catho-edu.png',
           openSource: false,
           repoUrl: '',
-          websiteUrl: 'https://www.catho.com.br/educacao/cursos-online'
+          websiteUrl: 'https://www.catho.com.br/educacao/cursos-online',
+          available: false
         },
         {
           title: 'EasyBank',
@@ -215,7 +227,8 @@ export default {
           picture: '/projects/challenge02.png',
           openSource: true,
           repoUrl: 'https://github.com/profdangarcia/front-challenge-02',
-          websiteUrl: 'https://front-challenge-02.now.sh/'
+          websiteUrl: 'https://front-challenge-02.now.sh/',
+          available: true
         },
         {
           title: 'Places in the World',
@@ -224,9 +237,16 @@ export default {
           picture: '/projects/challenge03.png',
           openSource: true,
           repoUrl: 'https://github.com/profdangarcia/front-challenge-03',
-          websiteUrl: 'https://front-challenge-03.vercel.app/'
+          websiteUrl: 'https://front-challenge-03.vercel.app/',
+          available: true
         }
-      ]
+      ],
+      tip: {
+        title: 'Here, take it ☕',
+        message:
+          'This portfolio is open source too and is on Github. Check it out!',
+        url: 'https://github.com/profdangarcia/my-portfolio'
+      }
     },
     contact: {
       title: 'GET IN TOUCH',

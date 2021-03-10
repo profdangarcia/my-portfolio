@@ -29,4 +29,45 @@ export default createGlobalStyle`
     border: 0;
     outline: none;
   }
+
+  .bouncing {
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .great-bouncing {
+    --high: -60px;
+    --low: -7px;
+  }
+
+  .short-bouncing {
+    --high: -5px;
+    --low: -2px;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(var(--high));
+    }
+    50% {
+      transform: scale(1, 1) translateY(0);
+    }
+    57% {
+      transform: scale(1, 1) translateY(var(--low));
+    }
+    64% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }
 `

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
   background: ${props => props.theme.colors.primary};
   width: 100%;
+  position: relative;
+  overflow: hidden;
 `
 
 export const Content = styled.div`
