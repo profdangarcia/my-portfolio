@@ -18,7 +18,7 @@ type Props = {
 }
 
 const TipBox: React.FC<Props> = ({ data: { title, message, url } }) => {
-  const [visibility, setVisibility] = useState(false)
+  const [visible, setVisible] = useState(false)
 
   const DownSideArrow = (
     <FaArrowAltCircleDown className="bouncing short-bouncing" />
@@ -27,12 +27,12 @@ const TipBox: React.FC<Props> = ({ data: { title, message, url } }) => {
 
   return (
     <Container
-      visibility={visibility}
-      onMouseOver={() => setVisibility(true)}
-      onMouseOut={() => setVisibility(false)}
+      visible={visible}
+      onMouseOver={() => setVisible(true)}
+      onMouseOut={() => setVisible(false)}
     >
       <TipTop>
-        {visibility ? DownSideArrow : UpSideArrow}
+        {visible ? DownSideArrow : UpSideArrow}
         <TipTitle>{title}</TipTitle>
       </TipTop>
       <TipBody href={url} target="_blank">

@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
 interface TipProps {
-  visibility?: boolean
+  visible?: boolean
 }
 
 export const Container = styled.div<TipProps>`
   position: absolute;
-  bottom: ${({ visibility }) => (visibility ? '0' : '-200px')};
+  bottom: ${({ visible }) => (visible ? '0' : '-200px')};
   right: calc(50vw - 150px);
   width: 300px;
   height: 250px;
   background: black;
-  z-index: 20;
+  z-index: 9;
   transition: 0.5s ease-in-out;
   padding: 10px 10px 0;
   background: ${props => props.theme.colors.background};
@@ -24,14 +24,14 @@ export const Container = styled.div<TipProps>`
     bottom: 0;
     top: 0;
     margin: auto;
-    right: ${({ visibility }) => (visibility ? '0' : '-250px')};
+    right: ${({ visible }) => (visible ? '0' : '-250px')};
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 4px 0 0 4px;
   }
 `
-export const TipTop = styled.div<TipProps>`
+export const TipTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ export const TipTop = styled.div<TipProps>`
     margin-right: -65px;
   }
 `
-export const TipTitle = styled.h3<TipProps>`
+export const TipTitle = styled.h3`
   font-size: 22px;
   font-weight: 600;
   color: ${props => props.theme.colors.textTitle};
@@ -61,7 +61,7 @@ export const TipTitle = styled.h3<TipProps>`
   }
 `
 
-export const TipBody = styled.a<TipProps>`
+export const TipBody = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +92,7 @@ export const TipBody = styled.a<TipProps>`
     width: 100%;
   }
 `
-export const TipMessage = styled.p<TipProps>`
+export const TipMessage = styled.p`
   font-size: 14px;
   font-weight: 400;
 `
