@@ -125,11 +125,13 @@ export const Description = styled.p`
 export const SeeMoreBtn = styled.a`
   display: inline-block;
   margin-top: 10px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   background: #333;
   color: #fff;
+  font-weight: 600;
   text-decoration: none;
   transition: 0.5s ease-in-out;
+  border-radius: 6px;
 
   &:hover {
     background: #777;
