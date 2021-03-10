@@ -78,7 +78,7 @@ export default {
         {
           title: 'Cursos Rápidos',
           description:
-            'Ainda pela Catho Educação conseguimos lançar uma nova página para a venda de cursos online. Outro projeto que me orgulho de ter participado.',
+            'Ainda pela Catho Educação conseguimos lançar uma nova página para a venda de cursos online. Outro projeto que me orgulho de ter participado. Infelizmente não está mais no ar. 🥺',
           picture: '/projects/catho-edu.png',
           openSource: false,
           repoUrl: '',
@@ -213,7 +213,7 @@ export default {
         {
           title: 'Quick Courses',
           description:
-            'Still through Catho Educação we managed to launch a new page for the sale of online courses. Another project that I am proud to have participated in.',
+            'Still through Catho Educação we managed to launch a new page for the sale of online courses. Another project that I am proud to have participated in. Unfortunately it is no longer online. 🥺',
           picture: '/projects/catho-edu.png',
           openSource: false,
           repoUrl: '',

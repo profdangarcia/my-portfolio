@@ -13,6 +13,7 @@ interface Projects {
   openSource: boolean
   repoUrl?: string
   websiteUrl: string
+  available?: boolean
 }
 interface ComponentData {
   title: string

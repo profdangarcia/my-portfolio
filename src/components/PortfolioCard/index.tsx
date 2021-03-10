@@ -12,7 +12,7 @@ import {
   SeeMoreBtn
 } from './styles'
 
-interface CardProps {
+export interface CardProps {
   cardData: {
     title: string
     description: string
@@ -20,15 +20,27 @@ interface CardProps {
     openSource: boolean
     repoUrl?: string
     websiteUrl: string
+    available?: boolean
   }
   buttonText: string
 }
 
 const PortfolioCard: React.FC<CardProps> = ({ cardData, buttonText }) => {
+  const seeMoreButton = (
+    <SeeMoreBtn href={cardData.websiteUrl} target="_blank">
+      {buttonText}
+    </SeeMoreBtn>
+  )
+
   return (
     <Container>
       <ImgBox data-text="OCC">
-        <CardImg src={cardData.picture} alt={cardData.title} loading="lazy" />
+        <CardImg
+          src={cardData.picture}
+          alt={cardData.title}
+          loading="lazy"
+          available={cardData.available}
+        />
       </ImgBox>
       {cardData.openSource && (
         <OpenSrcFlag>
@@ -42,9 +54,7 @@ const PortfolioCard: React.FC<CardProps> = ({ cardData, buttonText }) => {
         <Content>
           <Title>{cardData.title}</Title>
           <Description>{cardData.description}</Description>
-          <SeeMoreBtn href={cardData.websiteUrl} target="_blank">
-            {buttonText}
-          </SeeMoreBtn>
+          {cardData.available && seeMoreButton}
         </Content>
       </ContentContainer>
     </Container>

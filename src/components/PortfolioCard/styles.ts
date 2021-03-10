@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+interface StyleProps {
+  available: boolean
+}
 
 export const Container = styled.div`
   position: relative;
@@ -82,11 +85,12 @@ export const ImgBox = styled.div`
   }
 `
 
-export const CardImg = styled.img`
+export const CardImg = styled.img<StyleProps>`
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s ease-in-out;
+  filter: ${props => (props.available ? 'grayscale(0)' : 'grayscale(100%)')};
 `
 
 export const ContentContainer = styled.div`
@@ -126,6 +130,7 @@ export const SeeMoreBtn = styled.a`
   color: #fff;
   text-decoration: none;
   transition: 0.5s ease-in-out;
+
   &:hover {
     background: #777;
   }
