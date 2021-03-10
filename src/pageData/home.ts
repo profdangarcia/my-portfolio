@@ -29,7 +29,7 @@ export default {
     about: {
       title: 'Entre e tome uma xícara de café...',
       messages: [
-        'Meu nome é Daniel e sou apaixonado por tecnologia. Possuo um perfil voltado ao frontend mas também me aventuro no backend. Trabalhei alguns anos por conta própria e hoje sou Desenvolvedor Frontend pela Catho.',
+        'Meu nome é Daniel e sou apaixonado por tecnologia. Possuo um perfil voltado ao frontend mas também me aventuro no backend. Trabalhei alguns anos por conta própria e hoje sou Desenvolvedor Front-end pela Catho.',
         'Gosto de resolver desafios e atualmente concentro meus estudos em Node, React e NextJS❤️'
       ]
     },

@@ -19,7 +19,7 @@ interface PageProps {
 const Home: React.FC<PageProps> = ({ language }) => {
   const seoTitle = 'Aceita um café?'
   const seoDescription =
-    'Um desenvolvedor frontend que ama a tecnologia e novos desafios!'
+    'Um desenvolvedor front-end que ama a tecnologia e novos desafios!'
 
   const data = pageData[language]
 
