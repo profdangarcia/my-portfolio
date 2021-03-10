@@ -33,7 +33,7 @@ const Banner: React.FC<Props> = ({ data }) => {
       {typingData}
       <SocialLinks />
       <KeepGoingButton href="#about">
-        <FaAngleDown />
+        <FaAngleDown className="bouncing great-bouncing" />
       </KeepGoingButton>
     </Container>
   )

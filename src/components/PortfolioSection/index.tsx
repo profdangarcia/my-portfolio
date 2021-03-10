@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import PortfolioCard from '../PortfolioCard'
+import TipBox, { ComponentData as TipProps } from '../TipBox'
 import SectionTitle from '../utils/SectionTitle'
 import Wrapper from '../utils/Wrapper'
 
@@ -18,6 +19,7 @@ interface ComponentData {
   description: string
   buttonText: string
   projects: Array<Projects>
+  tip?: TipProps
 }
 
 type Props = {
@@ -45,6 +47,7 @@ const PortfolioSection: React.FC<Props> = ({ data }) => {
         <SectionTitle title={data.title} description={data.description} />
         <Content>{cards}</Content>
       </Wrapper>
+      <TipBox data={data.tip} />
     </Container>
   )
 }
