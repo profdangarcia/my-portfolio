@@ -8,7 +8,7 @@ import Document, {
   NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import MessengerPlugin from '../components/MessengerPlugin'
+import { HeadGTM, BodyGTM } from '../components/GoogleGTM'
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -42,6 +42,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt">
         <Head>
+          <HeadGTM />
           <meta charSet="utf-8" />
           <link
             href="https://fonts.googleapis.com/css?family=Poppins"
@@ -58,7 +59,7 @@ export default class MyDocument extends Document {
           <link rel="favicon" href="/favicon3.ico?v=2" />
         </Head>
         <body>
-          <MessengerPlugin />
+          <BodyGTM />
           <Main />
           <NextScript />
         </body>
