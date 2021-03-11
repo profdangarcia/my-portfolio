@@ -8,6 +8,7 @@ import Document, {
   NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import MessengerPlugin from '../components/MessengerPlugin'
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -57,6 +58,7 @@ export default class MyDocument extends Document {
           <link rel="favicon" href="/favicon3.ico?v=2" />
         </Head>
         <body>
+          <MessengerPlugin />
           <Main />
           <NextScript />
         </body>
