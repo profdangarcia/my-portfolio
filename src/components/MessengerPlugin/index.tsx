@@ -1,4 +1,16 @@
+/* eslint-disable camelcase */
 import React from 'react'
+import styled from 'styled-components'
+
+interface FBDivProps {
+  attribution: string
+  page_id: string
+  theme_color: string
+  logged_in_greeting: string
+  logged_out_greeting: string
+}
+
+export const FBDiv = styled.div<FBDivProps>``
 
 const MessengerPlugin: React.FC = () => {
   const fbScript = `window.fbAsyncInit = function() {
@@ -20,14 +32,14 @@ const MessengerPlugin: React.FC = () => {
     <>
       <div id="fb-root"></div>
       <script dangerouslySetInnerHTML={{ __html: fbScript }} />
-      <div
+      <FBDiv
         className="fb-customerchat"
         attribution="setup_tool"
         page_id="100691388772153"
         theme_color="#333333"
         logged_in_greeting="Em que posso ajudar?  -  How can I help?"
         logged_out_greeting="Em que posso ajudar?  -  How can I help?"
-      ></div>
+      ></FBDiv>
     </>
   )
 }
