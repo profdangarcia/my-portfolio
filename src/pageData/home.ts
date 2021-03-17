@@ -1,24 +1,9 @@
 export default {
   pt: {
-    header: {
-      links: [
-        {
-          name: 'Home',
-          url: '/'
-        },
-        {
-          name: 'Sobre',
-          url: '#about'
-        },
-        {
-          name: 'Portfólio',
-          url: '#portfolio'
-        },
-        {
-          name: 'Contato',
-          url: '#contact'
-        }
-      ]
+    seo: {
+      title: 'Aceita um café?',
+      description:
+        'Um desenvolvedor front-end que ama a tecnologia e novos desafios!'
     },
     banner: [
       'Seja bem vindo!',
@@ -134,31 +119,13 @@ export default {
           error: 'Diga algo no e-mail.'
         }
       }
-    },
-    footer: {
-      message: 'Criado com ❤️ por Dan Garcia'
     }
   },
   en: {
-    header: {
-      links: [
-        {
-          name: 'Home',
-          url: '/'
-        },
-        {
-          name: 'About',
-          url: '#about'
-        },
-        {
-          name: 'Portfolio',
-          url: '#portfolio'
-        },
-        {
-          name: 'Contact',
-          url: '#contact'
-        }
-      ]
+    seo: {
+      title: 'Would you like coffee?',
+      description:
+        'A front-end developer who loves technology and new challenges!'
     },
     banner: ['Be Welcome!', "I'm Daniel", 'Web Developer 💻', 'And I love ☕'],
     about: {
@@ -269,9 +236,6 @@ export default {
           error: 'Say something in the email.'
         }
       }
-    },
-    footer: {
-      message: 'Created with ❤️ by Dan Garcia'
     }
   }
 }

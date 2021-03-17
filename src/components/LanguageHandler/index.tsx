@@ -5,14 +5,16 @@ import { Container, Content, Button, Flag } from './styles'
 type ComponentProps = {
   changeLanguage: Dispatch<SetStateAction<string>>
   currentLanguage: string
+  currentPage: string
 }
 
 const LanguageHandler: React.FC<ComponentProps> = ({
   changeLanguage,
-  currentLanguage
+  currentLanguage,
+  currentPage
 }) => {
   return (
-    <Container>
+    <Container isHome={currentPage === '/'}>
       <Content>
         <Button onClick={() => changeLanguage('en')}>
           <Flag

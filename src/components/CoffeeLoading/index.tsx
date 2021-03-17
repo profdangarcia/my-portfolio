@@ -9,6 +9,7 @@ const CoffeeLoading: React.FC = () => {
   useEffect(() => {
     setTimeout(() => setShowCup(true), 50)
     setTimeout(() => {
+      sessionStorage.setItem('@dan-dev:coffe-loaded', 'true')
       setShowCup(false)
       setShowLoad(false)
     }, 3000)

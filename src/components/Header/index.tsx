@@ -19,15 +19,15 @@ type link = {
   name: string
   url: string
 }
-interface Links {
-  links: Array<link>
-}
 interface Props {
-  data: Links
+  data: {
+    links: Array<link>
+  }
+  isHome?: boolean
 }
 
-const Header: React.FC<Props> = ({ data: { links } }) => {
-  const [isVisible, setiIsVisible] = useState(false)
+const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
+  const [isVisible, setiIsVisible] = useState(!isHome)
   const [showNav, setShowNav] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
 
@@ -40,11 +40,11 @@ const Header: React.FC<Props> = ({ data: { links } }) => {
   const handleScroll = () => {
     const windowHeight = window.innerHeight
 
-    if (window.pageYOffset >= windowHeight && !isVisible) {
+    if (window.pageYOffset >= windowHeight && !isVisible && isHome) {
       setiIsVisible(true)
     }
 
-    if (window.pageYOffset < windowHeight && isVisible) {
+    if (window.pageYOffset < windowHeight && isVisible && isHome) {
       setiIsVisible(false)
       showNav && setShowNav(false)
     }
@@ -80,6 +80,7 @@ const Header: React.FC<Props> = ({ data: { links } }) => {
         isVisible={isVisible}
         showNav={showNav}
         onBlur={closeNavigation}
+        isHome={isHome}
       >
         <Wrapper>
           <Nav>

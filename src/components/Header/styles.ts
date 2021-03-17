@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
 interface HeaderProps {
-  readonly isVisible?: boolean
-  readonly showNav: boolean
+  isVisible?: boolean
+  showNav: boolean
+  isHome?: boolean
 }
 
-export const Container = styled.header`
+export const Container = styled.header<HeaderProps>`
   width: 100%;
-  position: fixed;
+  position: ${props => (props.isHome ? 'fixed' : 'relative')};
   max-height: ${props => (props.showNav ? '500px' : '92px')};
   overflow: hidden;
-  margin: ${(props: HeaderProps) =>
-    props.isVisible ? '0 0 0 0' : '-102px 0 0 0'};
+  margin: ${props => (props.isVisible ? '0 0 0 0' : '-102px 0 0 0')};
   background: #fff;
   box-shadow: -5px 10px 12px -10px rgba(201, 201, 201, 0.67);
   transition: 0.5s ease-in-out;
