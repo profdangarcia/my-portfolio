@@ -6,7 +6,6 @@ import Seo from '../components/Seo'
 import TechSection from '../components/TechSection'
 import PortfolioSection from '../components/PortfolioSection'
 import Contact from '../components/Contact'
-import CoffeeLoading from '../components/CoffeeLoading'
 
 import pageData from '../pageData/home'
 
@@ -20,7 +19,6 @@ const Home: React.FC<PageProps> = ({ language }) => {
   return (
     <>
       <Seo data={data.seo} />
-      <CoffeeLoading />
       <Banner data={data.banner} />
       <About data={data.about} />
       <TechSection data={data.techs} />

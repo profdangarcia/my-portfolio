@@ -9,15 +9,16 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import generalData from '../pageData/general'
 import GlobalStyle from '../styles/global'
+import CoffeeLoading from '../components/CoffeeLoading'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [language, setLanguage] = useState('en')
   const { pathname } = useRouter()
-  console.log(pathname)
   const data = generalData[language]
 
   return (
     <ThemeProvider theme={theme}>
+      <CoffeeLoading />
       <LanguageHandler
         changeLanguage={setLanguage}
         currentLanguage={language}
