@@ -14,7 +14,7 @@ const Blog: React.FC<PageProps> = ({ language }) => {
   return (
     <>
       <Seo data={data.seo} />
-      <BlogGrid />
+      <BlogGrid data={data.blog} />
     </>
   )
 }

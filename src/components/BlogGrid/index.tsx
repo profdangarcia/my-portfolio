@@ -4,10 +4,16 @@ import Wrapper from '../utils/Wrapper'
 
 import { Container, Title } from './styles'
 
-const BlogGrid: React.FC = () => {
+interface Props {
+  data: {
+    title: string
+  }
+}
+
+const BlogGrid: React.FC<Props> = ({ data }) => {
   return (
     <Wrapper>
-      <Title>EM BREVE...</Title>
+      <Title>{data.title}</Title>
       <Container>
         <ShimmerBlogCard />
         <ShimmerBlogCard />
