@@ -9,7 +9,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #111;
-  position: absolute;
+  position: fixed;
   z-index: ${(props: LoadProps) => (props.showLoad ? '100' : '-20')};
   opacity: ${(props: LoadProps) => (props.showLoad ? '1' : '0')};
   transition: 0.5s ease-in-out;

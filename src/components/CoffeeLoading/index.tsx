@@ -7,11 +7,16 @@ const CoffeeLoading: React.FC = () => {
   const [showCup, setShowCup] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setShowCup(true), 50)
-    setTimeout(() => {
-      setShowCup(false)
-      setShowLoad(false)
-    }, 3000)
+    const sawLoading = sessionStorage.getItem('@dan-dev:coffe-loaded')
+    if (!sawLoading) {
+      setTimeout(() => setShowCup(true), 50)
+      setTimeout(() => {
+        setShowCup(false)
+        setShowLoad(false)
+      }, 3000)
+      sessionStorage.setItem('@dan-dev:coffe-loaded', 'true')
+    }
+    setShowLoad(false)
   }, [])
 
   return (
