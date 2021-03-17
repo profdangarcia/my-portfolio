@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
+interface ContainerProps {
+  isHome: boolean
+}
 interface StatusProps {
   active: boolean
 }
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: 40px;
-  position: absolute;
+  position: ${props => (props.isHome ? 'absolute' : 'relative')};
   top: 0;
   right: 0;
   background: #f7f7f7;

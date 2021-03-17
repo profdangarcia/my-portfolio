@@ -8,15 +8,19 @@ export default {
         },
         {
           name: 'Sobre',
-          url: '#about'
+          url: '/#about'
         },
         {
           name: 'Portfólio',
-          url: '#portfolio'
+          url: '/#portfolio'
         },
         {
           name: 'Contato',
-          url: '#contact'
+          url: '/#contact'
+        },
+        {
+          name: 'Blog',
+          url: '/blog'
         }
       ]
     },
@@ -148,15 +152,19 @@ export default {
         },
         {
           name: 'About',
-          url: '#about'
+          url: '/#about'
         },
         {
           name: 'Portfolio',
-          url: '#portfolio'
+          url: '/#portfolio'
         },
         {
           name: 'Contact',
-          url: '#contact'
+          url: '/#contact'
+        },
+        {
+          name: 'Blog',
+          url: '/blog'
         }
       ]
     },
