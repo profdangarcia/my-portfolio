@@ -1,5 +1,10 @@
 export default {
   pt: {
+    seo: {
+      title: 'Aceita um café?',
+      description:
+        'Um desenvolvedor front-end que ama a tecnologia e novos desafios!'
+    },
     banner: [
       'Seja bem vindo!',
       'Me chamo Daniel',
@@ -117,6 +122,11 @@ export default {
     }
   },
   en: {
+    seo: {
+      title: 'Would you like coffee?',
+      description:
+        'A front-end developer who loves technology and new challenges!'
+    },
     banner: ['Be Welcome!', "I'm Daniel", 'Web Developer 💻', 'And I love ☕'],
     about: {
       title: 'Come in and have a cup of coffee...',

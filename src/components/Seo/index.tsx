@@ -2,17 +2,24 @@ import React from 'react'
 import Head from 'next/head'
 
 interface SeoProps {
-  title: string
-  description: string
-  canonical?: string
+  data: {
+    title: string
+    description: string
+    canonical?: string
+  }
 }
 
-const Seo: React.FC<SeoProps> = ({ title, description, canonical = '' }) => {
+const Seo: React.FC<SeoProps> = ({
+  data: { title, description, canonical = '' }
+}) => {
   return (
     <Head>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
-      <meta name="google-site-verification" content="hyVDovsqxQpSLvMzLawu_CkTM5siBtxl1Y6RrNhxpY8" />
+      <meta
+        name="google-site-verification"
+        content="hyVDovsqxQpSLvMzLawu_CkTM5siBtxl1Y6RrNhxpY8"
+      />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"

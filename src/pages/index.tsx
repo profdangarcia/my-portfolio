@@ -15,15 +15,11 @@ interface PageProps {
 }
 
 const Home: React.FC<PageProps> = ({ language }) => {
-  const seoTitle = 'Aceita um café?'
-  const seoDescription =
-    'Um desenvolvedor front-end que ama a tecnologia e novos desafios!'
-
   const data = pageData[language]
 
   return (
     <>
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo data={data.seo} />
       <CoffeeLoading />
       <Banner data={data.banner} />
       <About data={data.about} />
