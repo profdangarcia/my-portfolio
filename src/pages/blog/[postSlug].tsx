@@ -3,16 +3,9 @@ import { getPostBySlug, getAllPosts } from '../api/posts'
 import { GetStaticPropsContext } from 'next'
 import Seo from '../../components/Seo'
 import BlogPost from '../../components/BlogPost'
+import { CompletePost } from '../../types/post'
 
-interface PostProps {
-  title: string
-  description: string
-  image: string
-  content: string
-  slug: string
-}
-
-export default function Post(props: PostProps) {
+export default function Post(props: CompletePost) {
   return (
     <>
       <Seo data={{ ...props, canonical: `/blog/${props.slug}` }} />
