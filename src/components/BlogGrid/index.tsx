@@ -1,5 +1,5 @@
 import React from 'react'
-import ShimmerBlogCard from '../shimmer/ShimmerBlogCard'
+import PostItem from '../PostItem'
 import Wrapper from '../utils/Wrapper'
 
 import { Container, Title } from './styles'
@@ -8,19 +8,22 @@ interface Props {
   data: {
     title: string
   }
+  posts: Array<{
+    slug: string
+    title: string
+    image: string
+    description: string
+  }>
 }
 
-const BlogGrid: React.FC<Props> = ({ data }) => {
+const BlogGrid: React.FC<Props> = ({ data, posts }) => {
   return (
     <Wrapper>
       <Title>{data.title}</Title>
       <Container>
-        <ShimmerBlogCard />
-        <ShimmerBlogCard />
-        <ShimmerBlogCard />
-        <ShimmerBlogCard />
-        <ShimmerBlogCard />
-        <ShimmerBlogCard />
+        {posts.map(post => (
+          <PostItem data={post} key={post.slug} />
+        ))}
       </Container>
     </Wrapper>
   )

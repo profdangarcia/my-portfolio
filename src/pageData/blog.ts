@@ -5,16 +5,17 @@ export default {
       description: 'Café com leitura'
     },
     blog: {
-      title: 'EM BREVE...'
+      title: ''
     }
   },
   en: {
     seo: {
       title: 'Blog',
-      description: 'Coffee with reading'
+      description: 'Coffee with reading',
+      canonical: '/blog'
     },
     blog: {
-      title: 'SOON...'
+      title: ''
     }
   }
 }
