@@ -30,6 +30,14 @@ export const PostTitle = styled.h1`
   }
 `
 
+export const PostAuthor = styled.p`
+  color: #b7b7b7;
+  font-size: 11px;
+  @media (min-width: ${props => props.theme.screens.tablet}) {
+    font-size: 12px;
+  }
+`
+
 export const PostImage = styled.img`
   width: 100%;
   max-width: 600px;

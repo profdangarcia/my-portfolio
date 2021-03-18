@@ -1,4 +1,6 @@
 import React from 'react'
+
+import { CompletePost } from '../../types/post'
 import PostItem from '../PostItem'
 import Wrapper from '../utils/Wrapper'
 
@@ -8,12 +10,7 @@ interface Props {
   data: {
     title: string
   }
-  posts: Array<{
-    slug: string
-    title: string
-    image: string
-    description: string
-  }>
+  posts: CompletePost[]
 }
 
 const BlogGrid: React.FC<Props> = ({ data, posts }) => {

@@ -1,7 +1,10 @@
 ---
+id: 2
 title: "O Batman também é gente!"
 description: "Já ouviu falar no cavaleiro das trevas? Mas ele já ouviu falar de você?"
 image: "https://www.opovo.com.br/_midias/jpg/2020/08/26/batman_filmes_warner_bros-13369316.jpg"
+author: "Daniel Garcia"
+date: "03 Mar. 2021"
 ---
 
 Já falamos um pouco sobre ferramentas de consumo de dados de API com GraphQL como o Apollo e Relay, agora chegou o momento de mostrarmos um pouco como funciona um serviço com GraphQL.

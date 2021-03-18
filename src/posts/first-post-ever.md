@@ -1,7 +1,10 @@
 ---
+id: 1
 title: "Construindo APIs com GraphQL no Node.js"
 description: "No post de hoje criaremos um servidor simples com GraphQL e Express.js, mas que servira de base para estruturas mais complexas."
 image: "https://www.juicysantos.com.br/wp-content/uploads/2017/10/cheers-1171x546.jpg"
+author: "Daniel Garcia"
+date: "21 Fev. 2021"
 ---
 
 Já falamos um pouco sobre ferramentas de consumo de dados de API com GraphQL como o Apollo e Relay, agora chegou o momento de mostrarmos um pouco como funciona um serviço com GraphQL.

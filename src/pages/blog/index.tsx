@@ -2,19 +2,13 @@ import React from 'react'
 import BlogGrid from '../../components/BlogGrid'
 import Seo from '../../components/Seo'
 
+import { CompletePost } from '../../types/post'
 import pageData from '../../pageData/blog'
 import { getAllPosts } from '../api/posts'
 
-interface Posts {
-  slug: string
-  title: string
-  description: string
-  image: string
-  content?: string
-}
 interface PageProps {
   language: string
-  posts: Posts[]
+  posts: CompletePost[]
 }
 
 const Blog: React.FC<PageProps> = ({ language, posts }) => {

@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { CompletePost } from '../../types/post'
+
 import {
   Container,
   PostImage,
@@ -11,12 +13,7 @@ import {
 } from './styles'
 
 interface Props {
-  data: {
-    title: string
-    slug: string
-    image: string
-    description: string
-  }
+  data: CompletePost
 }
 
 const PostItem: React.FC<Props> = ({ data }) => {
@@ -28,7 +25,9 @@ const PostItem: React.FC<Props> = ({ data }) => {
           <PostData>
             <PostTitle>{data.title}</PostTitle>
             <PostDescription>{data.description}</PostDescription>
-            <PostAuthor>Daniel Garcia - 22 Fev. 2021</PostAuthor>
+            <PostAuthor>
+              {data.author} - {data.date}
+            </PostAuthor>
           </PostData>
         </Container>
       </a>
