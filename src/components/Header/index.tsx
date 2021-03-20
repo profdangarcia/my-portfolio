@@ -9,6 +9,7 @@ import {
   Nav,
   VisibleContent,
   Logo,
+  TextLogo,
   MenuButton,
   MobileNavigation,
   NavList,
@@ -87,7 +88,11 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
             <VisibleContent>
               <Link href="/">
                 <a>
-                  <Logo>DAN GARCIA</Logo>
+                  {isHome ? (
+                    <Logo>DAN GARCIA</Logo>
+                  ) : (
+                    <TextLogo>DAN GARCIA</TextLogo>
+                  )}
                 </a>
               </Link>
               {!isMobile && navigation}

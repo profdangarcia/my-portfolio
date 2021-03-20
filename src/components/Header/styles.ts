@@ -52,6 +52,28 @@ export const Logo = styled.h1`
   }
 `
 
+export const TextLogo = styled.span`
+  font-size: 36px;
+  color: #000;
+  font-family: 'Six Caps', sans-serif;
+  font-weight: 400;
+  min-width: 110px;
+  transition: 0.2s ease-in-out;
+  display: block;
+
+  &:hover {
+    font-size: 38px;
+  }
+
+  @media (min-width: ${props => props.theme.screens.medium}) {
+    font-size: 48px;
+
+    &:hover {
+      font-size: 50px;
+    }
+  }
+`
+
 export const MenuButton = styled.button`
   @media (min-width: ${props => props.theme.screens.medium}) {
     display: none;

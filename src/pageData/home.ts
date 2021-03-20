@@ -6,7 +6,7 @@ export default {
         'Um desenvolvedor front-end que ama a tecnologia e novos desafios!'
     },
     banner: [
-      'Seja bem vindo!',
+      'Seja bem-vindo!',
       'Me chamo Daniel',
       'Construo sites 💻',
       'E amo ☕'

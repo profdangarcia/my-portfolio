@@ -17,15 +17,11 @@ const LanguageHandler: React.FC<ComponentProps> = ({
     <Container isHome={currentPage === '/'}>
       <Content>
         <Button onClick={() => changeLanguage('en')}>
-          <Flag
-            src="./us.svg"
-            alt="English"
-            active={currentLanguage === 'en'}
-          />
+          <Flag src="/us.svg" alt="English" active={currentLanguage === 'en'} />
         </Button>
         <Button onClick={() => changeLanguage('pt')}>
           <Flag
-            src="./br.svg"
+            src="/br.svg"
             alt="Português BR"
             active={currentLanguage === 'pt'}
           />
