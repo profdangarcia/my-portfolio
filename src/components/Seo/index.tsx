@@ -6,12 +6,16 @@ interface SeoProps {
     title: string
     description: string
     canonical?: string
+    thumbnail?: string
   }
 }
 
 const Seo: React.FC<SeoProps> = ({
-  data: { title, description, canonical = '' }
+  data: { title, description, canonical = '', thumbnail }
 }) => {
+  const thumbnailImage =
+    thumbnail || 'https://dangarcia-devel.vercel.app/dev.png'
+
   return (
     <Head>
       <meta name="description" content={description} />
@@ -26,14 +30,8 @@ const Seo: React.FC<SeoProps> = ({
         content={`https://dangarcia-devel.vercel.app${canonical}`}
       />
       <meta property="og:description" content={description} />
-      <meta
-        property="og:image"
-        content="https://dangarcia-devel.vercel.app/dev.png"
-      />
-      <meta
-        name="twitter:image"
-        content="https://dangarcia-devel.vercel.app/dev.png"
-      />
+      <meta property="og:image" content={thumbnailImage} />
+      <meta name="twitter:image" content={thumbnailImage} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

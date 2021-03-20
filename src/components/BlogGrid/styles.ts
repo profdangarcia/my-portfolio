@@ -16,8 +16,23 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  text-align: center;
+  text-align: right;
   color: ${props => props.theme.colors.textTitle};
   margin-top: 20px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+
+  @media (min-width: ${props => props.theme.screens.tablet}) {
+    font-size: 36px;
+  }
+`
+
+export const Description = styled.h3`
+  text-align: right;
+  font-size: 16px;
+  margin-top: 15px;
+
+  @media (min-width: ${props => props.theme.screens.tablet}) {
+    font-size: 18px;
+  }
 `

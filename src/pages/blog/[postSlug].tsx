@@ -8,7 +8,13 @@ import { CompletePost } from '../../types/post'
 export default function Post(props: CompletePost) {
   return (
     <>
-      <Seo data={{ ...props, canonical: `/blog/${props.slug}` }} />
+      <Seo
+        data={{
+          ...props,
+          canonical: `/blog/${props.slug}`,
+          thumbnail: props.image
+        }}
+      />
       <BlogPost data={props} />
     </>
   )

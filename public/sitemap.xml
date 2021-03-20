@@ -1,0 +1,11 @@
+<urlset xmlns="http://www.sitemaps.org/schema/sitemap/9.0">
+  <url>
+    <loc>https://dangarcia-devel.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://dangarcia-devel.vercel.app/blog</loc>
+  </url>
+  <url>
+    <loc>https://dangarcia-devel.vercel.app/blog/nextjs-ssr-e-seo</loc>
+  </url>
+</urlset>

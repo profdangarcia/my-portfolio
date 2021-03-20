@@ -5,7 +5,8 @@ export default {
       description: 'Café com leitura'
     },
     blog: {
-      title: ''
+      title: 'BLOG 📰',
+      description: 'Tecnologia e assuntos diversos...'
     }
   },
   en: {
@@ -15,7 +16,8 @@ export default {
       canonical: '/blog'
     },
     blog: {
-      title: ''
+      title: 'BLOG 📰',
+      description: 'Only available in PT-BR for now...'
     }
   }
 }
