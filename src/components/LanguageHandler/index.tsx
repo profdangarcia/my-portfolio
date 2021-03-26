@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router'
 import React, { Dispatch, SetStateAction } from 'react'
 
 import { Container, Content, Button, Flag } from './styles'
@@ -5,16 +6,15 @@ import { Container, Content, Button, Flag } from './styles'
 type ComponentProps = {
   changeLanguage: Dispatch<SetStateAction<string>>
   currentLanguage: string
-  currentPage: string
 }
 
 const LanguageHandler: React.FC<ComponentProps> = ({
   changeLanguage,
-  currentLanguage,
-  currentPage
+  currentLanguage
 }) => {
+  const { pathname } = useRouter()
   return (
-    <Container isHome={currentPage === '/'}>
+    <Container isHome={pathname === '/'}>
       <Content>
         <Button onClick={() => changeLanguage('en')}>
           <Flag src="/us.svg" alt="English" active={currentLanguage === 'en'} />

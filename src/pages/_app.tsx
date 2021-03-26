@@ -22,7 +22,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <LanguageHandler
         changeLanguage={setLanguage}
         currentLanguage={language}
-        currentPage={pathname}
       />
       <Header data={data.header} isHome={pathname === '/'} />
       <Component {...pageProps} language={language} />

@@ -97,3 +97,7 @@ export const PostImage = styled.img`
   margin: 20px auto;
   border-radius: 4px;
 `
+export const CommentSection = styled.div`
+  width: 100%;
+  margin-top: 40px;
+`

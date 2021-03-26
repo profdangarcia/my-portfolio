@@ -1,9 +1,17 @@
 import React from 'react'
 import { CompletePost } from '../../types/post'
+import { Comments } from '../Comments'
 
 import Wrapper from '../utils/Wrapper'
 
-import { Container, PostBody, PostTitle, PostAuthor, PostImage } from './styles'
+import {
+  Container,
+  PostBody,
+  PostTitle,
+  PostAuthor,
+  PostImage,
+  CommentSection
+} from './styles'
 
 interface Props {
   data: CompletePost
@@ -26,6 +34,9 @@ const BlogPost: React.FC<Props> = ({
             id="post-content"
           />
         </PostBody>
+        <CommentSection>
+          <Comments />
+        </CommentSection>
       </Wrapper>
     </Container>
   )
