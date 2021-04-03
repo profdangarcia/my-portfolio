@@ -8,4 +8,7 @@
   <url>
     <loc>https://dangarcia-devel.vercel.app/blog/nextjs-ssr-e-seo</loc>
   </url>
+  <url>
+    <loc>https://dangarcia-devel.vercel.app/blog/entenda-nextjs-ssg-isr</loc>
+  </url>
 </urlset>

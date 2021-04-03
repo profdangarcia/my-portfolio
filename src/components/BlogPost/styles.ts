@@ -10,11 +10,23 @@ export const PostBody = styled.article`
   flex-direction: column;
   font-size: 14px;
 
-  #post-content h2,
-  h3,
+  #post-content h2 {
+    margin: 30px 0 15px;
+    color: ${props => props.theme.colors.textTitle};
+  }
+
+  #post-content h3,
   h4 {
     margin: 15px 0;
     color: ${props => props.theme.colors.textTitle};
+  }
+
+  #post-content p {
+    line-height: 1.75rem;
+  }
+
+  #post-content ul {
+    margin: 10px 0;
   }
 
   #post-content a {

@@ -2,9 +2,10 @@
 id: 1
 title: "O que você precisa saber sobre NextJS e SSR"
 description: "Neste primeiro post vamos conversar sobre NextJS e as vantagens de se utilizar SSR (Server Side Rendering)"
-image: "https://drive.google.com/uc?export=view&id=1HiiRaFVzQcm3fvepA0Q2vJs3SnFo5fBa"
+image: "/posts/post1-thumb.png"
 author: "Daniel Garcia"
 date: "20 Mar. 2021"
+edited: "02 Abr. 2021"
 ---
 
 [NextJs](https://nextjs.org/) é um poderoso framework capaz de facilitar nossa vida ao trabalhar com ReactJS. Repleto de otimizações no que diz respeito ao front-end, a ferramenta vem para resolver diversos problemas do desenvolvimento web que podemos enfrentar no nosso dia a dia.
@@ -60,9 +61,11 @@ O método ```getServerSideProps``` precisa retornar um objeto contendo ou uma ch
 
 Simples, não? Apenas lembre-se: todo código que será executado nesse método irá acontecer **NO SERVIDOR**, sendo assim você não terá acesso às variáveis globais do navegador, como por exemplo ```window```, e não poderá acessar coisas como ```sessionStorage``` ou ```localStorage```.
 
+Além do SSR, o NextJS possui outras opções para fornecermos páginas ao usuário. Quer conhecer essas outras opções? Continue lendo sobre: <a href="/blog/entenda-nextjs-ssg-isr" target="_blank">O verdadeiro poder do NextJS com SSG e ISR</a>
+
 
 ### Mais?
 
-- Quer saber mais sobre NextJS? Consulte a [documentação oficial](https://nextjs.org/docs/getting-started)
+- Quer saber mais sobre NextJS? Consulte a <a href="https://nextjs.org/docs/getting-started" target="_blank">documentação oficial</a>
 
-- Quer ver mais posts como esse? Me mande [uma mensagem](https://dangarcia-devel.vercel.app/#contact) ou me encontre nas redes sociais.
+- Quer ver mais posts como esse? Me mande <a href="/#contact" target="_blank">uma mensagem</a> ou me encontre nas redes sociais.

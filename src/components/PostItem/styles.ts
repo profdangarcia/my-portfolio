@@ -31,7 +31,7 @@ export const PostData = styled.div`
 
 export const PostTitle = styled.h2`
   color: ${props => props.theme.colors.textTitle};
-  margin: 25px 0 13px 0;
+  margin: 15px 0 13px 0;
   font-family: 'Montserrat', sans-serif;
   min-height: 50px;
 `
