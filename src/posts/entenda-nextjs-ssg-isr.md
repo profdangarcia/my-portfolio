@@ -66,7 +66,7 @@ Existe agora apenas uma questão a ser resolvida que, caso você não tenha se p
 
 ## SSG e ISR para rotas dinâmicas
 
-Em uma aplicação NextJS, cada arquivo localizado no diretório ```pages``` da aplicação representa uma rota, por exemplo, o arquivo ```pages/blog/index.jsx``` representa a página **/blog**. Para criar uma rota que receba um parâmetro que possa ser recuperado via <a href="https://blog.rocketseat.com.br/tipos-de-parametros-nas-requisicoes-rest/#:~:text=%E2%9C%85%20Route%20params,dados%20da%20requisi%C3%A7%C3%A3o%20na%20rota.&text=Nesse%20exemplo%20acima%20busco%2C%20atualizo,%3A%20tgmarinho%20ou%20id%3A%20380327." target="_blank">route params</a> basta criar o arquivo com o nome envolto em **colchetes**. Sendo assim o arquivo localizado em ```pages/blog/[postSlug].jsx``` representa qualquer rota do tipo **/blog/nome-do-post**. Sendo assim, como gerar páginas estáticas sendo que são diversas as possibilidades de slugs para os nomes dos posts?
+Em uma aplicação NextJS, cada arquivo localizado no diretório ```pages``` da aplicação representa uma rota, por exemplo, o arquivo ```pages/blog/index.jsx``` representa a página **/blog**. Para criar uma rota que receba um parâmetro que possa ser recuperado via <a href="https://blog.rocketseat.com.br/tipos-de-parametros-nas-requisicoes-rest/#:~:text=%E2%9C%85%20Route%20params,dados%20da%20requisi%C3%A7%C3%A3o%20na%20rota.&text=Nesse%20exemplo%20acima%20busco%2C%20atualizo,%3A%20tgmarinho%20ou%20id%3A%20380327." target="_blank">route params</a> basta criar o arquivo com o nome envolto em **colchetes**. Sendo assim o arquivo localizado em ```pages/blog/[postSlug].jsx``` representa qualquer rota do tipo **/blog/nome-do-post**. Dessa forma, como gerar páginas estáticas sendo que são diversas as possibilidades de slugs para os nomes dos posts?
 
 O NextJS trás uma solução extremamente simples para lidar com esse tipo de página. Ao implementarmos o método ```getStaticProps``` em uma rota dinâmica, torna-se obrigatória a implementação de um segundo método chamado ```getStaticPaths```. Este segundo método possui duas principais responsabilidades: definir **quais são as páginas (slugs) que serão geradas de forma estática** e também **definir como o Next deve lidar com requisições de slugs que não tenham sido gerados de forma estática no momento do build**. O exemplo abaixo demonstra como os dois métodos devem trabalhar juntos:
 
@@ -121,7 +121,7 @@ Cada um dos parâmetros dinâmicos que a rota precisa receber devem constar no o
   }
 ~~~
 
-Também é possível, dentro do método ```getStaticPaths``` recuperar através de uma request todos os **paths** que derão origem a páginas estáticas, nesse caso poderíamos fazer o seguinte para o primeiro exemplo:
+Também é possível, dentro do método ```getStaticPaths``` recuperar através de uma request todos os **paths** que darão origem a páginas estáticas, nesse caso poderíamos fazer o seguinte para o primeiro exemplo:
 
 ~~~javascript
 export async function getStaticPaths() {
