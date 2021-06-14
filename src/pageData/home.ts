@@ -14,7 +14,7 @@ export default {
     about: {
       title: 'Entre e tome uma xícara de café...',
       messages: [
-        'Meu nome é Daniel e sou apaixonado por tecnologia. Possuo um perfil voltado ao frontend mas também me aventuro no backend. Trabalhei alguns anos por conta própria e hoje sou Desenvolvedor Front-end pela Catho.',
+        'Meu nome é Daniel e sou apaixonado por tecnologia. Possuo um perfil voltado ao frontend mas também me aventuro no backend. Trabalhei alguns anos por conta própria, trabalhei para a Catho e Catho Educação, e hoje sou Desenvolvedor Front-end nas Americanas SA.',
         'Gosto de resolver desafios e atualmente concentro meus estudos em Node, React e NextJS❤️'
       ]
     },
@@ -131,7 +131,7 @@ export default {
     about: {
       title: 'Come in and have a cup of coffee...',
       messages: [
-        "My name is Daniel and I am passionate about technology. I have a crush for the frontend but I also venture into the backend. I worked for a few years on my own and today I'm a Frontend Developer at Catho.",
+        "My name is Daniel and I am passionate about technology. I have a crush for the frontend but I also venture into the backend. I worked for a few years on my own, worked for Catho and Catho Educação and today I'm a Frontend Developer at Americanas SA.",
         'I like to solve challenges and currently focus my studies on Node, React and NextJS❤️'
       ]
     },
