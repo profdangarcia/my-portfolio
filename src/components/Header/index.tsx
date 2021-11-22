@@ -53,16 +53,20 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
     }
 
     let focused = ''
-    links.map(link => {
-      if (link.id) {
-        const element = document.querySelector(link.id)
-        const isTheFocus = isInViewport(element)
-        if (isTheFocus) {
-          focused = link.id
+    if (isHome) {
+      links.map(link => {
+        if (link.id) {
+          const element = document.querySelector(link.id)
+          const isTheFocus = isInViewport(element)
+          if (isTheFocus) {
+            focused = link.id
+          }
         }
-      }
-    })
-    setFocusedElement(focused)
+      })
+    }
+    if (focused !== focusedElement) {
+      setFocusedElement(focused)
+    }
   }
 
   useEffect(() => {
@@ -84,7 +88,7 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
           </Link>
         </NavItem>
       )),
-    [links, focusedElement]
+    [links, focusedElement, isHome]
   )
 
   const navigation = <NavList>{navItems}</NavList>
