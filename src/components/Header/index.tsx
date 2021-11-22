@@ -57,7 +57,6 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
       if (link.id) {
         const element = document.querySelector(link.id)
         const isTheFocus = isInViewport(element)
-        // console.log(isTheFocus, link.id)
         if (isTheFocus) {
           focused = link.id
         }
