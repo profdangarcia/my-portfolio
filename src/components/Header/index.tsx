@@ -77,7 +77,7 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
   useEffect(() => {
     const isMobileDevice = checkIsMobile()
     !isMobileDevice && setIsMobile(false)
-  }, [])
+  }, [isHome])
 
   const navItems = useMemo(
     () =>
@@ -88,7 +88,7 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
           </Link>
         </NavItem>
       )),
-    [links, focusedElement, isHome]
+    [links, focusedElement]
   )
 
   const navigation = <NavList>{navItems}</NavList>
