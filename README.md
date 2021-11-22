@@ -31,13 +31,13 @@ nvm use
 2. Once you are using the same NPM version just run:
 
 ```bash
-npm i
+yarn
 ```
 
 3. And run the development server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
