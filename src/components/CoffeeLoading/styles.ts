@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import coffee from './coffee.png'
 
 interface LoadProps {
   showLoad: boolean
@@ -26,7 +25,7 @@ export const Cup = styled.div`
   right: 0;
   top: 50%;
   border-radius: 2px 2px 50px 50px;
-  background: url(${coffee});
+  background: url('./coffee.png');
   box-shadow: 0 0 0 6px white;
   background-repeat: repeat-x;
   background-position: 0 140px;

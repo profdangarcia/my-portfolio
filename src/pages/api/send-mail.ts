@@ -6,8 +6,8 @@ export default async (
   res: NextApiResponse
 ): Promise<void> => {
   const payload = req.body
-  const { HOST } = process.env
-  if (!payload || req.method !== 'POST' || req.headers.origin !== HOST) {
+  const { MAIL_USER } = process.env
+  if (!payload || req.method !== 'POST') {
     return res.status(400).json({
       message: 'Bad request!'
     })
@@ -16,7 +16,7 @@ export default async (
   const message = `Contato: "${payload.name}" <${payload.email}>\n\n${payload.message}`
 
   const mailOptions = {
-    from: `"${payload.name}" < ${payload.email} >`,
+    from: `"Novo Contato via Portfólio" < ${MAIL_USER} >`,
     subject: 'Contato via Dan Garcia - Portfólio',
     text: message
   }

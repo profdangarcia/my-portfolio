@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { GoThreeBars } from 'react-icons/go'
 
-import { checkIsMobile } from '../../utils'
+import { checkIsMobile, isInViewport } from '../../utils'
 import Wrapper from '../utils/Wrapper'
 import {
   Container,
@@ -19,6 +19,7 @@ import {
 type link = {
   name: string
   url: string
+  id?: string
 }
 interface Props {
   data: {
@@ -31,6 +32,7 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
   const [isVisible, setiIsVisible] = useState(!isHome)
   const [showNav, setShowNav] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
+  const [focusedElement, setFocusedElement] = useState('')
 
   const closeNavigation = useCallback(() => {
     if (showNav) {
@@ -49,6 +51,22 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
       setiIsVisible(false)
       showNav && setShowNav(false)
     }
+
+    let focused = ''
+    if (isHome) {
+      links.map(link => {
+        if (link.id) {
+          const element = document.querySelector(link.id)
+          const isTheFocus = isInViewport(element)
+          if (isTheFocus) {
+            focused = link.id
+          }
+        }
+      })
+    }
+    if (focused !== focusedElement) {
+      setFocusedElement(focused)
+    }
   }
 
   useEffect(() => {
@@ -59,18 +77,18 @@ const Header: React.FC<Props> = ({ data: { links }, isHome = true }) => {
   useEffect(() => {
     const isMobileDevice = checkIsMobile()
     !isMobileDevice && setIsMobile(false)
-  }, [])
+  }, [isHome])
 
   const navItems = useMemo(
     () =>
       links.map(link => (
-        <NavItem key={link.name}>
+        <NavItem key={link.name} inFocus={focusedElement === link.id}>
           <Link href={link.url}>
             <a>{link.name}</a>
           </Link>
         </NavItem>
       )),
-    [links]
+    [links, focusedElement]
   )
 
   const navigation = <NavList>{navItems}</NavList>

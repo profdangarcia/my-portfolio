@@ -107,8 +107,11 @@ export const NavList = styled.ul`
     }
   }
 `
+type NavItemProps = {
+  inFocus: boolean
+}
 
-export const NavItem = styled.li`
+export const NavItem = styled.li<NavItemProps>`
   text-align: center;
   height: 45px;
   line-height: 45px;
@@ -117,7 +120,8 @@ export const NavItem = styled.li`
 
   a {
     text-decoration: none;
-    color: #000;
+    color: ${props => (props.inFocus ? '#666' : '#000')};
+    font-size: ${props => (props.inFocus ? '16px' : 'inherit')};
     transition: 0.2s ease-in;
   }
 

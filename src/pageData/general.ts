@@ -8,15 +8,18 @@ export default {
         },
         {
           name: 'Sobre',
-          url: '/#about'
+          url: '/#about',
+          id: '#about'
         },
         {
           name: 'Portfólio',
-          url: '/#portfolio'
+          url: '/#portfolio',
+          id: '#portfolio'
         },
         {
           name: 'Contato',
-          url: '/#contact'
+          url: '/#contact',
+          id: '#contact'
         },
         {
           name: 'Blog',
@@ -37,15 +40,18 @@ export default {
         },
         {
           name: 'About',
-          url: '/#about'
+          url: '/#about',
+          id: '#about'
         },
         {
           name: 'Portfolio',
-          url: '/#portfolio'
+          url: '/#portfolio',
+          id: '#portfolio'
         },
         {
           name: 'Contact',
-          url: '/#contact'
+          url: '/#contact',
+          id: '#contact'
         },
         {
           name: 'Blog',
